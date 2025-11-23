@@ -1,6 +1,10 @@
 import './style.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import hungerImg from './assets/hunger.jpg';
+import healthImg from './assets/health.jpg';
+import educationImg from './assets/education.jpg';
+import crisisImg from './assets/crisis.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,10 +80,10 @@ const impactImage = document.getElementById('impact-image');
 
 // Map text → image
 const impactMap = {
-  "Fighting Hunger": "assets/hunger.jpg",
-  "Improving Health": "assets/health.jpg",
-  "Supporting Education": "assets/education.jpg",
-  "In Times of Crisis": "assets/crisis.jpg",
+  "Fighting Hunger": hungerImg,
+  "Improving Health": healthImg,
+  "Supporting Education": educationImg,
+  "In Times of Crisis": crisisImg,
 };
 
 const impactItems = document.querySelectorAll('.impact-item');
