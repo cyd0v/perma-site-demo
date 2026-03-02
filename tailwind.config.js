@@ -3,6 +3,9 @@ export default {
   content: [
     "./index.html",
     "./donate.html",
+    "./about.html",
+    "./getinvolved.html",
+    "./work.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
