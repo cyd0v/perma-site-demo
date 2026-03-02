@@ -75,10 +75,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Impact image
 const impactImage = document.getElementById('impact-image');
+const impactOverlay = document.getElementById('impact-overlay');
+const impactDescription = document.getElementById('impact-description');
+const impactItems = document.querySelectorAll('.impact-item');
 
-// Map text → image
 const impactMap = {
   "Fighting Hunger": hungerImg,
   "Improving Health": healthImg,
@@ -86,12 +87,35 @@ const impactMap = {
   "In Times of Crisis": crisisImg,
 };
 
-const impactItems = document.querySelectorAll('.impact-item');
+const impactDescriptions = {
+  "Fighting Hunger": "Providing meals and sustainable food programs to families in need across Malaysia.",
+  "Improving Health": "Supporting medical outreach, treatments, and health education initiatives.",
+  "Supporting Education": "Giving underprivileged children access to quality learning opportunities.",
+  "In Times of Crisis": "Rapid response to floods, emergencies, and community disasters."
+};
+
+let typingInterval;
+
+function typeText(text) {
+  clearInterval(typingInterval);
+  impactDescription.textContent = "";
+
+  let i = 0;
+
+  typingInterval = setInterval(() => {
+    if (i < text.length) {
+      impactDescription.textContent += text[i];
+      i++;
+    } else {
+      clearInterval(typingInterval);
+    }
+  }, 20);
+}
+
+// Default state
 window.addEventListener('DOMContentLoaded', () => {
   const defaultText = "Fighting Hunger";
-  const defaultSrc = impactMap[defaultText];
-  impactImage.src = defaultSrc;
-  impactImage.style.opacity = 1;
+  impactImage.src = impactMap[defaultText];
   impactItems.forEach(item => {
     if (item.textContent.trim() === defaultText) {
       item.classList.add('text-blue-700');
@@ -99,21 +123,35 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Hover
 impactItems.forEach(item => {
-  const text = item.textContent.trim();
-  const newSrc = impactMap[text];
-
   item.addEventListener('mouseenter', () => {
-    if (newSrc && !impactImage.src.includes(newSrc)) {
-      impactImage.style.opacity = 0;
-      setTimeout(() => {
-        impactImage.src = newSrc;
-        impactImage.style.opacity = 1;
-      }, 250);
-    }
+    const text = item.textContent.trim();
 
+    const newSrc = impactMap[text];
+    const description = impactDescriptions[text];
+
+    // Image fade
+    impactImage.style.opacity = 0;
+    setTimeout(() => {
+      impactImage.src = newSrc;
+      impactImage.style.opacity = 1;
+    }, 250);
+
+    // Highlight active
     impactItems.forEach(i => i.classList.remove('text-blue-700'));
     item.classList.add('text-blue-700');
+
+    // Show overlay
+    impactOverlay.style.opacity = 1;
+
+    // Typing
+    typeText(description);
+  });
+
+  item.addEventListener('mouseleave', () => {
+    impactOverlay.style.opacity = 0;
+    clearInterval(typingInterval);
   });
 });
 
