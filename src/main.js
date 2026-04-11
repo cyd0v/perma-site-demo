@@ -1,38 +1,8 @@
 import './style.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import hungerImg from './assets/hunger.jpg';
-import healthImg from './assets/health.jpg';
-import educationImg from './assets/education.jpg';
-import crisisImg from './assets/crisis.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const counters = document.querySelectorAll(".count");
-
-counters.forEach(counter => {
-  const target = +counter.getAttribute("data-target");
-  const duration = 2;
-  const obj = { val: 0 };
-
-  gsap.to(obj, {
-    val: target,
-    duration,
-    ease: "power1.out",
-    onUpdate: () => {
-      if (target >= 1000)
-        counter.textContent = Math.floor(obj.val).toLocaleString();
-      else
-        counter.textContent = Math.floor(obj.val);
-    },
-    scrollTrigger: {
-      trigger: counter,
-      start: "top 80%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-  });
-});
 
 // scroll fade-in effect
 const observer = new IntersectionObserver(entries => {
@@ -42,11 +12,12 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-//Navvy control
+// Navbar scroll control — navbar sits at top-7 (28px) below topbar
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
   const hero = document.getElementById("hero");
-  const navLinks = navbar.querySelectorAll("a, h1"); // select all nav items and the logo text
+  if (!navbar) return;
+  const navLinks = navbar.querySelectorAll("a, span");
 
   if (window.scrollY > 80) {
     navbar.classList.remove("bg-transparent");
@@ -68,125 +39,25 @@ window.addEventListener("scroll", () => {
   }
 
   // Hero shadow
-  if (window.scrollY > 85) {
-    hero.classList.add("shadow-[0_15px_30px_rgba(0,0,0,0.25)]");
-  } else {
-    hero.classList.remove("shadow-[0_15px_30px_rgba(0,0,0,0.25)]");
+  if (hero) {
+    if (window.scrollY > 85) {
+      hero.classList.add("shadow-[0_15px_30px_rgba(0,0,0,0.25)]");
+    } else {
+      hero.classList.remove("shadow-[0_15px_30px_rgba(0,0,0,0.25)]");
+    }
   }
 });
-
-const impactImage = document.getElementById('impact-image');
-const impactOverlay = document.getElementById('impact-overlay');
-const impactDescription = document.getElementById('impact-description');
-const impactItems = document.querySelectorAll('.impact-item');
-
-const impactMap = {
-  "Fighting Hunger": hungerImg,
-  "Improving Health": healthImg,
-  "Supporting Education": educationImg,
-  "In Times of Crisis": crisisImg,
-};
-
-const impactDescriptions = {
-  "Fighting Hunger": "Providing meals and sustainable food programs to families in need across Malaysia.",
-  "Improving Health": "Supporting medical outreach, treatments, and health education initiatives.",
-  "Supporting Education": "Giving underprivileged children access to quality learning opportunities.",
-  "In Times of Crisis": "Rapid response to floods, emergencies, and community disasters."
-};
-
-let typingInterval;
-
-function typeText(text) {
-  clearInterval(typingInterval);
-  impactDescription.textContent = "";
-
-  let i = 0;
-
-  typingInterval = setInterval(() => {
-    if (i < text.length) {
-      impactDescription.textContent += text[i];
-      i++;
-    } else {
-      clearInterval(typingInterval);
-    }
-  }, 20);
-}
-
-// Default state
-window.addEventListener('DOMContentLoaded', () => {
-  const defaultText = "Fighting Hunger";
-  impactImage.src = impactMap[defaultText];
-  impactItems.forEach(item => {
-    if (item.textContent.trim() === defaultText) {
-      item.classList.add('text-blue-700');
-    }
-  });
-});
-
-// Hover
-impactItems.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    const text = item.textContent.trim();
-
-    const newSrc = impactMap[text];
-    const description = impactDescriptions[text];
-
-    // Image fade
-    impactImage.style.opacity = 0;
-    setTimeout(() => {
-      impactImage.src = newSrc;
-      impactImage.style.opacity = 1;
-    }, 250);
-
-    // Highlight active
-    impactItems.forEach(i => i.classList.remove('text-blue-700'));
-    item.classList.add('text-blue-700');
-
-    // Show overlay
-    impactOverlay.style.opacity = 1;
-
-    // Typing
-    typeText(description);
-  });
-
-  item.addEventListener('mouseleave', () => {
-    impactOverlay.style.opacity = 0;
-    clearInterval(typingInterval);
-  });
-});
-
-
-// Background color change on stats section
-const statsSection = document.getElementById("stats");
-const body = document.body;
-
-const bgObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        body.classList.add("bg-blue-950", "text-white", "transition-colors", "duration-1000");
-        body.classList.remove("bg-white", "text-gray-800");
-      } else {
-        body.classList.add("bg-white", "text-gray-800");
-        body.classList.remove("bg-blue-950", "text-white");
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
-
-bgObserver.observe(statsSection);
 
 // Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault(); // prevent default jump
-    const targetId = this.getAttribute('href').substring(1); // remove #
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
     const target = document.getElementById(targetId);
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
-        block: 'start' // aligns element to top of viewport
+        block: 'start'
       });
     }
   });
@@ -214,11 +85,13 @@ window.addEventListener('resize', updateNavbarView);
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("show");
-});
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+  });
+}
 
-//modal
+// Modal
 const modal = document.getElementById("success-modal");
 const modalContent = document.getElementById("modal-content");
 const modalClose = document.getElementById("modal-close");
@@ -226,13 +99,11 @@ const modalClose = document.getElementById("modal-close");
 function showModal(message) {
   modal.querySelector("p").textContent = message;
 
-  // Make overlay visible immediately
   modal.classList.remove("hidden");
-  modal.classList.add("flex");  // overlay flex container
+  modal.classList.add("flex");
 
-  // trigger animation in next tick
   requestAnimationFrame(() => {
-    modal.style.opacity = "1"; // fade in overlay
+    modal.style.opacity = "1";
     modalContent.classList.remove("scale-90", "opacity-0");
     modalContent.classList.add("scale-100", "opacity-100");
   });
@@ -242,19 +113,20 @@ function hideModal() {
   modalContent.classList.remove("scale-100", "opacity-100");
   modalContent.classList.add("scale-90", "opacity-0");
 
-  modal.style.opacity = "0"; // fade out overlay
+  modal.style.opacity = "0";
 
   setTimeout(() => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
-  }, 300); // match transition duration
+  }, 300);
 }
 
+if (modalClose) {
+  modalClose.addEventListener("click", hideModal);
+}
 
-modalClose.addEventListener("click", hideModal);
-
-// Footer contact form
-const contactForm = document.querySelector("#getinvolved form");
+// Contact form
+const contactForm = document.querySelector("#contact-form");
 contactForm?.addEventListener("submit", function (e) {
   e.preventDefault();
   showModal("Thank you for reaching out! We will contact you soon.");

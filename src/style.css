@@ -96,3 +96,23 @@
 #mobile-menu.show {
   max-height: 500px;
 }
+
+/* Stat card float animation (hero right column) */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+.stat-card { animation: float 7s ease-in-out infinite; }
+.stat-card:nth-child(2) { animation-delay: 1.8s; margin-top: 1.5rem; }
+.stat-card:nth-child(3) { animation-delay: 3.5s; }
+.stat-card:nth-child(4) { animation-delay: 5.2s; margin-top: 1.5rem; }
+
+/* Programme card top bar hover animation */
+.prog-card-bar {
+  height: 4px;
+  background: #2E6B47;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.prog-card:hover .prog-card-bar { transform: scaleX(1); }
