@@ -1,413 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PERMA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="/src/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PERMA — Care That Reaches Where Others Don't</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css"/>
 </head>
+<body class="font-sans bg-cream text-ink overflow-x-hidden">
 
-<body class="bg-[#FAF7F2] text-gray-800 font-[Poppins] overflow-x-hidden min-h-screen">
-
-  <!-- TOP BAR -->
-  <div id="topbar" class="fixed top-0 left-0 right-0 z-[1001] bg-[#2E6B47] flex items-center justify-end px-6 md:px-12 py-1.5 gap-4 text-white text-xs font-bold">
-    <span class="mr-2 opacity-80">Follow us</span>
-    <a href="https://www.facebook.com/perma.malaysia" target="_blank" rel="noopener"
-      class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors duration-200">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-      </svg>
-      <span>Facebook</span>
+  <!-- ═══════ TOP BAR ═══════ -->
+  <div id="topbar" class="fixed top-0 left-0 right-0 z-50 bg-moss flex items-center justify-end px-12 py-1.5 gap-4 max-sm:px-4 max-sm:gap-2">
+    <span class="text-white/50 text-xs font-extrabold tracking-widest uppercase mr-1 max-sm:hidden">Follow us</span>
+    <a href="https://www.facebook.com/perma.malaysia" target="_blank" rel="noopener" class="topbar-social">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      Facebook
     </a>
-    <a href="https://www.instagram.com/perma.malaysia" target="_blank" rel="noopener"
-      class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors duration-200">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-      </svg>
-      <span>Instagram</span>
+    <a href="https://www.instagram.com/perma.malaysia" target="_blank" rel="noopener" class="topbar-social">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram
     </a>
   </div>
 
-  <!-- DESKTOP NAVBAR -->
-  <header id="navbar" class="fixed left-0 right-0 z-[1000] top-7 transition-all duration-300 text-white bg-transparent">
-    <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between items-center">
-      <a href="index.html#hero">
-        <div class="flex items-center gap-3">
-          <img src="/src/assets/logo.jpg" alt="PERMA Logo" class="h-10 w-auto rounded-full shadow-md" />
-          <span class="text-2xl font-extrabold tracking-tight drop-shadow-lg">PERMA</span>
-        </div>
-      </a>
-      <nav class="hidden md:flex space-x-10 font-semibold text-base drop-shadow">
-        <a href="index.html#hero" class="hover:text-yellow-400 transition-all duration-300">Home</a>
-        <a href="about.html" class="hover:text-yellow-400 transition-all duration-300">About</a>
-        <a href="work.html" class="hover:text-yellow-400 transition-all duration-300">Our Work</a>
-        <a href="getinvolved.html" class="hover:text-yellow-400 transition-all duration-300">Get Involved</a>
-        <a href="donate.html" class="hover:text-yellow-400 transition-all duration-300">Donate</a>
-      </nav>
-    </div>
-  </header>
+  <!-- ═══════ NAVBAR ═══════ -->
+  <nav id="navbar" class="fixed top-[35px] left-0 right-0 z-40 flex items-center justify-between px-12 py-3.5 bg-cream/95 backdrop-blur-md border-b border-border transition-shadow max-md:px-6">
+    <a href="#" onclick="showPage('home');return false" class="flex items-center gap-2.5 no-underline">
+      <img src="/src/assets/logo.jpg" alt="PERMA Logo" class="h-9 w-9 rounded-full object-cover shadow-sm" />
+      <span class="font-serif text-2xl font-bold text-ink leading-none">PER<span class="text-terra">MA</span></span>
+    </a>
+    <ul id="nav-links" class="hidden md:flex items-center gap-1 list-none">
+      <li><a href="#" class="nav-link active" onclick="showPage('home');return false">Home</a></li>
+      <li><a href="#" class="nav-link" onclick="showPage('about');return false">About</a></li>
+      <li><a href="#" class="nav-link" onclick="showPage('work');return false">Our Work</a></li>
+      <li><a href="#" class="nav-link" onclick="showPage('getinvolved');return false">Get Involved</a></li>
+      <li><a href="#" class="nav-link nav-donate" onclick="showPage('donate');return false">Donate</a></li>
+    </ul>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="Open menu" class="md:hidden flex flex-col gap-1.5 bg-transparent border-none p-1.5 cursor-pointer">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </nav>
 
-  <!-- MOBILE NAVBAR -->
-  <header id="mobile-navbar" class="md:hidden fixed top-7 left-0 w-full z-[1000] bg-white shadow-md text-gray-800">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <img src="/src/assets/logo.jpg" alt="PERMA Logo" class="h-10 w-auto rounded-full shadow-md" />
-        <span class="text-xl font-bold tracking-tight">PERMA</span>
-      </div>
-      <button id="menu-btn" class="text-3xl text-gray-800">&#9776;</button>
-    </div>
-    <div id="mobile-menu" class="flex-col w-full text-center bg-white border-t border-gray-200 shadow-md">
-      <a href="index.html#hero" class="py-4 hover:bg-gray-50 block">Home</a>
-      <a href="about.html" class="py-4 hover:bg-gray-50 block">About</a>
-      <a href="work.html" class="py-4 hover:bg-gray-50 block">Our Work</a>
-      <a href="getinvolved.html" class="py-4 hover:bg-gray-50 block">Get Involved</a>
-      <a href="donate.html" class="py-4 hover:bg-gray-50 block">Donate</a>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section id="hero" class="min-h-screen bg-[#FAF7F2] pt-[calc(28px+4rem)] md:pt-[calc(28px+4.5rem)] flex items-center">
-    <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
-
-      <!-- Left Column: Text -->
-      <div>
-        <p class="text-sm font-bold tracking-widest uppercase text-[#C25A3A] mb-4">Trusted for 50 years · Est. 1975</p>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-[#1A1916] mb-6">
-          Care that reaches<br>where <em class="not-italic text-[#2E6B47]">others don't.</em>
-        </h1>
-        <p class="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
-          50 years of compassion, dignity, and commitment — serving communities across Malaysia regardless of race or religion.
-        </p>
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="donate.html"
-            class="bg-[#2E6B47] hover:bg-[#245838] text-white px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300 shadow-md">
-            Donate Now &#8594;
-          </a>
-          <a href="work.html"
-            class="border-2 border-[#2E6B47] text-[#2E6B47] hover:bg-[#2E6B47] hover:text-white px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300">
-            See Our Work
-          </a>
-        </div>
-        <!-- Trust badges -->
-        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-500 font-medium">
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#2E6B47] inline-block"></span>Compassion</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#2E6B47] inline-block"></span>Dignity</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#2E6B47] inline-block"></span>Commitment</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#2E6B47] inline-block"></span>All races &amp; religions</span>
-        </div>
-      </div>
-
-      <!-- Right Column: Stat Cards -->
-      <div class="bg-[#2E6B47]/10 rounded-3xl p-8 grid grid-cols-2 gap-5">
-        <div class="stat-card bg-white rounded-2xl shadow-md p-6 text-center">
-          <div class="text-3xl mb-2">&#127869;</div>
-          <div class="text-3xl font-extrabold text-[#2E6B47]">250K+</div>
-          <div class="text-sm text-gray-500 mt-1">Meals served annually</div>
-        </div>
-        <div class="stat-card bg-white rounded-2xl shadow-md p-6 text-center">
-          <div class="text-3xl mb-2">&#128106;</div>
-          <div class="text-3xl font-extrabold text-[#2E6B47]">12K+</div>
-          <div class="text-sm text-gray-500 mt-1">Families supported</div>
-        </div>
-        <div class="stat-card bg-white rounded-2xl shadow-md p-6 text-center">
-          <div class="text-3xl mb-2">&#129309;</div>
-          <div class="text-3xl font-extrabold text-[#2E6B47]">800+</div>
-          <div class="text-sm text-gray-500 mt-1">Active volunteers</div>
-        </div>
-        <div class="stat-card bg-white rounded-2xl shadow-md p-6 text-center">
-          <div class="text-3xl mb-2">&#127968;</div>
-          <div class="text-3xl font-extrabold text-[#2E6B47]">50+</div>
-          <div class="text-sm text-gray-500 mt-1">Communities reached</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROMISE BAND -->
-  <section class="bg-[#2E6B47] py-14 md:py-16 text-white text-center px-6">
-    <p class="text-xl md:text-2xl font-semibold italic max-w-3xl mx-auto leading-relaxed">
-      "When communities need support — PERMA will be there."
-    </p>
-    <p class="mt-3 text-sm tracking-widest uppercase opacity-75 font-semibold">Our Brand Promise · Since 1975</p>
-  </section>
-
-  <!-- WHAT WE DO / THREE PILLARS -->
-  <section class="py-16 md:py-24 bg-[#FAF7F2]">
-    <div class="max-w-6xl mx-auto px-6 md:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-bold tracking-widest uppercase text-[#2E6B47] mb-2">What We Do</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#1A1916]">Three pillars, one mission.</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Welfare -->
-        <div class="prog-card group bg-white rounded-2xl border border-[#E2DDD6] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="prog-card-bar"></div>
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-xl bg-[#2E6B47]/10 flex items-center justify-center text-2xl mb-5">&#129392;</div>
-            <h3 class="text-xl font-extrabold text-[#1A1916] mb-3">Welfare</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">
-              Supporting underprivileged families, the elderly, and differently-abled individuals with food, aid, and community care.
-            </p>
-            <a href="work.html" class="inline-block mt-5 text-sm font-bold text-[#2E6B47] hover:underline">Learn more &#8594;</a>
-          </div>
-        </div>
-
-        <!-- Health -->
-        <div class="prog-card group bg-white rounded-2xl border border-[#E2DDD6] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="prog-card-bar"></div>
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-xl bg-[#2E6B47]/10 flex items-center justify-center text-2xl mb-5">&#127973;</div>
-            <h3 class="text-xl font-extrabold text-[#1A1916] mb-3">Health</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">
-              Medical outreach, health screenings, and education initiatives that bring quality healthcare closer to those who need it.
-            </p>
-            <a href="work.html" class="inline-block mt-5 text-sm font-bold text-[#2E6B47] hover:underline">Learn more &#8594;</a>
-          </div>
-        </div>
-
-        <!-- Capacity Building -->
-        <div class="prog-card group bg-white rounded-2xl border border-[#E2DDD6] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="prog-card-bar"></div>
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-xl bg-[#2E6B47]/10 flex items-center justify-center text-2xl mb-5">&#127807;</div>
-            <h3 class="text-xl font-extrabold text-[#1A1916] mb-3">Capacity Building</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">
-              Skills training, education, and empowerment programmes that help communities thrive independently over the long term.
-            </p>
-            <a href="work.html" class="inline-block mt-5 text-sm font-bold text-[#2E6B47] hover:underline">Learn more &#8594;</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- IMPACT SECTION (dark) -->
-  <section id="impact" class="bg-[#1A1916] py-20 md:py-28 text-white">
-    <div class="max-w-6xl mx-auto px-6 md:px-8 text-center">
-      <p class="text-xs font-bold tracking-widest uppercase text-[#B8892A] mb-3">50 Years of Impact</p>
-      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-        Showing up, <em class="not-italic text-[#B8892A]">every single day.</em>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
-        A legacy of compassion, commitment, and change — together, we've made every year count across every corner of Malaysia.
-      </p>
-
-      <!-- Stats row -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-white/10 rounded-2xl overflow-hidden mb-14">
-        <div class="py-10 px-6 border-r border-white/10">
-          <div class="text-4xl md:text-5xl font-extrabold text-[#B8892A]">250K+</div>
-          <div class="text-sm text-gray-400 mt-2 font-medium">Meals Served</div>
-        </div>
-        <div class="py-10 px-6 border-r border-white/10">
-          <div class="text-4xl md:text-5xl font-extrabold text-[#B8892A]">12K+</div>
-          <div class="text-sm text-gray-400 mt-2 font-medium">Families Supported</div>
-        </div>
-        <div class="py-10 px-6 border-r border-white/10 border-t md:border-t-0">
-          <div class="text-4xl md:text-5xl font-extrabold text-[#B8892A]">800+</div>
-          <div class="text-sm text-gray-400 mt-2 font-medium">Active Volunteers</div>
-        </div>
-        <div class="py-10 px-6 border-t md:border-t-0">
-          <div class="text-4xl md:text-5xl font-extrabold text-[#B8892A]">50+</div>
-          <div class="text-sm text-gray-400 mt-2 font-medium">Communities Reached</div>
-        </div>
-      </div>
-
-      <!-- CTAs -->
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="about.html"
-          class="bg-white text-[#1A1916] hover:bg-gray-100 px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300 shadow-md">
-          Our Story &#8594;
-        </a>
-        <a href="donate.html"
-          class="border-2 border-white text-white hover:bg-white hover:text-[#1A1916] px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300">
-          Support the Mission
-        </a>
-      </div>
-
-      <!-- Hidden elements kept for JS compatibility -->
-      <div class="hidden">
-        <img id="impact-image" src="/src/assets/hunger.jpg" alt="">
-        <div id="impact-overlay"></div>
-        <p id="impact-description"></p>
-        <span class="impact-item"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BANNER -->
-  <section id="cta" class="bg-[#2E6B47] py-16 md:py-20 text-white text-center px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-        Be part of the <em class="not-italic italic">next 50 years.</em>
-      </h2>
-      <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-        Your support helps us serve Malaysia's underprivileged, elderly, and differently-abled — regardless of race or religion.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="donate.html"
-          class="bg-white text-[#2E6B47] hover:bg-gray-100 px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300 shadow-md">
-          Donate Now &#8594;
-        </a>
-        <a href="getinvolved.html"
-          class="border-2 border-white text-white hover:bg-white hover:text-[#2E6B47] px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300">
-          Volunteer
-        </a>
-        <a href="work.html"
-          class="text-white/80 hover:text-white underline underline-offset-4 py-3.5 font-semibold text-base transition-colors duration-200">
-          See Our Work
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNERS -->
-  <section id="partners" class="py-16 md:py-24 bg-[#FAF7F2]">
-    <div class="max-w-6xl mx-auto px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        <div class="text-center md:text-left">
-          <p class="text-xs font-bold tracking-widest uppercase text-[#2E6B47] mb-4">Our Partners</p>
-          <h3 class="text-3xl md:text-4xl font-extrabold leading-snug text-[#1A1916]">
-            Organisations who Believed and Trusted in Our Vision and Mission
-          </h3>
-        </div>
-
-        <div class="grid grid-cols-4 grid-rows-2 gap-5 place-items-center">
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-          <img src="/src/assets/brand2.jpg" alt="Partner" class="h-16 w-auto grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 object-contain" />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LOOKING AHEAD -->
-  <section class="py-16 md:py-24 bg-blue-950 text-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl md:text-5xl font-extrabold">Looking Ahead</h2>
-      <p class="mt-6 text-xl md:text-2xl leading-relaxed text-blue-100">
-        A community where no one is left behind.
-      </p>
-      <div class="mt-10">
-        <a href="donate.html"
-          class="bg-yellow-500 hover:bg-yellow-400 text-black px-10 py-4 rounded-full font-bold text-lg transition">
-          Be Part of the Future
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer" class="bg-[#1A1916] text-white py-16">
-    <div class="max-w-7xl mx-auto px-6 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-
-        <!-- Brand Column -->
-        <div class="md:col-span-1">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="/src/assets/logo.jpg" alt="PERMA Logo" class="h-10 w-auto rounded-full shadow-md" />
-            <span class="text-2xl font-extrabold">PERMA</span>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">
-            50 years of serving Malaysia's underprivileged, elderly, and differently-abled — with compassion and unity.
-          </p>
-          <p class="text-gray-500 text-sm italic mb-6">"Care that reaches where others don't."</p>
-          <div class="flex gap-3">
-            <a href="https://www.facebook.com/perma.malaysia" target="_blank" rel="noopener"
-              class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full text-xs font-bold transition-colors duration-200">
-              <i class="fab fa-facebook text-sm"></i> Facebook
-            </a>
-            <a href="https://www.instagram.com/perma.malaysia" target="_blank" rel="noopener"
-              class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full text-xs font-bold transition-colors duration-200">
-              <i class="fab fa-instagram text-sm"></i> Instagram
-            </a>
-          </div>
-        </div>
-
-        <!-- Our Work -->
-        <div>
-          <h4 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-5">Our Work</h4>
-          <ul class="space-y-3 text-sm text-gray-300">
-            <li><a href="work.html" class="hover:text-white transition-colors">Welfare Programmes</a></li>
-            <li><a href="work.html" class="hover:text-white transition-colors">Health Initiatives</a></li>
-            <li><a href="work.html" class="hover:text-white transition-colors">Capacity Building</a></li>
-            <li><a href="work.html" class="hover:text-white transition-colors">Community Outreach</a></li>
-          </ul>
-        </div>
-
-        <!-- Organisation -->
-        <div>
-          <h4 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-5">Organisation</h4>
-          <ul class="space-y-3 text-sm text-gray-300">
-            <li><a href="about.html" class="hover:text-white transition-colors">About PERMA</a></li>
-            <li><a href="about.html" class="hover:text-white transition-colors">Our History</a></li>
-            <li><a href="about.html" class="hover:text-white transition-colors">Leadership</a></li>
-            <li><a href="about.html" class="hover:text-white transition-colors">Reports &amp; Governance</a></li>
-          </ul>
-        </div>
-
-        <!-- Get Involved -->
-        <div id="getinvolved">
-          <h4 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-5">Get Involved</h4>
-          <ul class="space-y-3 text-sm text-gray-300 mb-6">
-            <li><a href="donate.html" class="hover:text-white transition-colors">Donate</a></li>
-            <li><a href="getinvolved.html" class="hover:text-white transition-colors">Volunteer</a></li>
-            <li><a href="getinvolved.html" class="hover:text-white transition-colors">Partner With Us</a></li>
-          </ul>
-          <!-- Contact form -->
-          <form id="contact-form" class="space-y-3">
-            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 rounded-lg text-gray-900 text-sm" required>
-            <input type="email" placeholder="Your Email" class="w-full px-3 py-2 rounded-lg text-gray-900 text-sm" required>
-            <textarea rows="2" placeholder="Short message" class="w-full px-3 py-2 rounded-lg text-gray-900 text-sm"></textarea>
-            <button type="submit"
-              class="w-full bg-[#2E6B47] hover:bg-[#245838] text-white px-5 py-2.5 rounded-full font-semibold text-sm transition">
-              Send Message
-            </button>
-          </form>
-        </div>
-
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-500">
-        <p>&#169; 2025 PERMA. All rights reserved.</p>
-        <p>Registered Welfare Organisation · Malaysia</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL POPUP -->
-  <div id="success-modal"
-    class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/60 transition-opacity duration-300">
-    <div id="modal-content"
-      class="bg-white shadow-2xl max-w-md w-auto p-8 text-center relative transform scale-90 opacity-0 transition-all duration-300 rounded-2xl">
-      <h2 class="text-2xl font-extrabold text-gray-900 mb-4">Thank You!</h2>
-      <p class="text-gray-700 mb-6 text-base">
-        Your message has been received successfully.
-      </p>
-      <button id="modal-close"
-        class="bg-[#2E6B47] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#245838] transition shadow-md hover:shadow-lg">
-        Close
-      </button>
-    </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed top-[86px] left-0 right-0 z-30 bg-white border-b border-border px-6 pt-4 pb-6 flex-col gap-1 shadow-lg">
+    <a href="#" class="mob-link" onclick="showPage('home');toggleMenu();return false">Home</a>
+    <a href="#" class="mob-link" onclick="showPage('about');toggleMenu();return false">About</a>
+    <a href="#" class="mob-link" onclick="showPage('work');toggleMenu();return false">Our Work</a>
+    <a href="#" class="mob-link" onclick="showPage('getinvolved');toggleMenu();return false">Get Involved</a>
+    <a href="#" class="mob-link mob-donate" onclick="showPage('donate');toggleMenu();return false">Donate Now →</a>
   </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: HOME
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <div class="min-h-screen grid md:grid-cols-2 bg-cream">
+      <div class="flex flex-col justify-center px-12 py-24 max-md:px-6 max-md:pt-20 max-md:pb-12">
+        <div class="eyebrow">Trusted for 50 years · Est. 1976</div>
+        <h1 class="font-serif text-5xl font-bold leading-tight text-ink">Care that reaches where <em class="text-moss not-italic font-bold">others don't.</em></h1>
+        <p class="text-slate leading-relaxed max-w-lg mt-4 text-lg">PERMA steps in where others do not — ensuring no one falls through the cracks. Welfare, health, and capacity-building, delivered with dignity across Malaysia.</p>
+        <div class="flex gap-4 flex-wrap mt-8">
+          <a href="#" class="btn btn-green" onclick="showPage('donate');return false">Donate Now →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('work');return false">See Our Work</a>
+        </div>
+        <div class="flex items-center gap-5 flex-wrap mt-10 pt-7 border-t border-border">
+          <span class="trust-badge"><span class="w-2 h-2 rounded-full bg-moss inline-block"></span> Compassion</span>
+          <span class="trust-badge"><span class="w-2 h-2 rounded-full bg-moss inline-block"></span> Dignity</span>
+          <span class="trust-badge"><span class="w-2 h-2 rounded-full bg-moss inline-block"></span> Commitment</span>
+          <span class="trust-badge"><span class="w-2 h-2 rounded-full bg-moss inline-block"></span> All races &amp; religions</span>
+        </div>
+      </div>
+      <div class="hidden md:flex bg-moss-light items-center justify-center p-12 relative overflow-hidden">
+        <img src="/src/assets/hunger.jpg" alt="PERMA community outreach" class="absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-moss-light/75"></div>
+        <div class="absolute inset-0" style="background:radial-gradient(circle at 70% 30%,rgba(46,107,71,.12) 0%,transparent 70%)"></div>
+        <div class="relative z-10 grid grid-cols-2 gap-4 w-full max-w-sm">
+          <div class="stat-card"><div class="text-2xl mb-2">🍽️</div><div class="font-serif text-3xl font-bold text-moss leading-none mb-1">250K+</div><div class="text-mist text-xs font-semibold leading-snug">Meals served annually</div></div>
+          <div class="stat-card mt-6"><div class="text-2xl mb-2">👨‍👩‍👧</div><div class="font-serif text-3xl font-bold text-moss leading-none mb-1">12K+</div><div class="text-mist text-xs font-semibold leading-snug">Families supported</div></div>
+          <div class="stat-card"><div class="text-2xl mb-2">🤝</div><div class="font-serif text-3xl font-bold text-moss leading-none mb-1">800+</div><div class="text-mist text-xs font-semibold leading-snug">Active volunteers</div></div>
+          <div class="stat-card mt-6"><div class="text-2xl mb-2">🏘️</div><div class="font-serif text-3xl font-bold text-moss leading-none mb-1">50+</div><div class="text-mist text-xs font-semibold leading-snug">Communities reached</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROMISE BAND -->
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+
+    <!-- PILLARS PREVIEW -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 items-end mb-12 fade-up">
+          <div>
+            <div class="eyebrow">What We Do</div>
+            <h2 class="font-serif text-4xl font-bold">Three pillars, <em class="text-moss not-italic">one mission.</em></h2>
+          </div>
+          <p class="text-mist leading-relaxed">Everything PERMA does is built on three core programmes — designed to meet people where they are and walk with them toward a stronger future.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5 fade-up">
+          <div class="prog-card">
+            <div class="prog-card-bar"></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-xl bg-moss-light flex items-center justify-center text-2xl mb-5">🫂</div>
+              <h3 class="font-serif text-xl font-semibold mb-2">Welfare</h3>
+              <p class="text-mist text-sm leading-relaxed">Immediate, compassionate support — food, financial aid, and crisis response for individuals and families facing hardship.</p>
+              <a href="#" class="prog-link" onclick="showPage('work');return false">Learn more →</a>
+            </div>
+          </div>
+          <div class="prog-card">
+            <div class="prog-card-bar"></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-xl bg-moss-light flex items-center justify-center text-2xl mb-5">🏥</div>
+              <h3 class="font-serif text-xl font-semibold mb-2">Health</h3>
+              <p class="text-mist text-sm leading-relaxed">Prevention, early detection, and mental wellbeing programmes — helping communities live stronger lives before a crisis hits.</p>
+              <a href="#" class="prog-link" onclick="showPage('work');return false">Learn more →</a>
+            </div>
+          </div>
+          <div class="prog-card">
+            <div class="prog-card-bar"></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-xl bg-moss-light flex items-center justify-center text-2xl mb-5">🌱</div>
+              <h3 class="font-serif text-xl font-semibold mb-2">Capacity Building</h3>
+              <p class="text-mist text-sm leading-relaxed">Education, vocational skills, sports, and the arts — creating lasting opportunity so individuals can stand tall and lift those around them.</p>
+              <a href="#" class="prog-link" onclick="showPage('work');return false">Learn more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACT DARK -->
+    <div class="bg-ink text-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="eyebrow" style="color:#B8892A">50 Years of Impact</div>
+        <h2 class="font-serif text-4xl font-bold text-white mb-3">Showing up, <em class="text-gold not-italic">every single day.</em></h2>
+        <p class="text-white/60 max-w-xl mb-12">From a small founding team in 1976 to a nationwide network — here is what five decades of commitment looks like.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden" style="gap:1.5px;background:rgba(255,255,255,.1)">
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">250K+</div><div class="text-white/50 text-sm">Meals served every year</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">12K+</div><div class="text-white/50 text-sm">Families supported</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">800+</div><div class="text-white/50 text-sm">Dedicated volunteers</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">50+</div><div class="text-white/50 text-sm">Communities reached</div></div>
+        </div>
+        <div class="flex gap-4 flex-wrap mt-10">
+          <a href="#" class="btn btn-white" onclick="showPage('about');return false">Our Story →</a>
+          <a href="#" class="btn btn-outline-white" onclick="showPage('donate');return false">Support the Mission</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="bg-moss text-white py-20 px-6 text-center">
+      <h2 class="font-serif text-4xl font-bold text-white max-w-lg mx-auto mb-4">Be part of the next <em class="text-gold-pale not-italic">50 years.</em></h2>
+      <p class="text-white/75 max-w-md mx-auto mb-8">Your support helps us serve Malaysia's underprivileged, elderly, and differently-abled — regardless of race or religion.</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="#" class="btn btn-white" onclick="showPage('donate');return false">Donate Now →</a>
+        <a href="#" class="btn btn-outline-white" onclick="showPage('getinvolved');return false">Volunteer</a>
+        <a href="#" class="btn btn-outline-white" onclick="showPage('work');return false">See Our Work</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2">
+            <a href="#" class="font-serif text-2xl font-bold text-white mb-3 block" onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a>
+            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare, health, and capacity-building — delivered with dignity and care.</p>
+            <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others don't.</p>
+            <div class="flex gap-2 mt-5">
+              <a href="https://www.facebook.com/perma.malaysia" target="_blank" rel="noopener" class="footer-social-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook
+              </a>
+              <a href="https://www.instagram.com/perma.malaysia" target="_blank" rel="noopener" class="footer-social-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Instagram
+              </a>
+            </div>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5>
+            <ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li></ul>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5>
+            <ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Partner With Us</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li></ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs">© 2025 PERMA. All rights reserved.</p>
+          <p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /page-home -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: ABOUT
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-about" class="page">
+
+    <div class="page-banner">
+      <div class="max-w-6xl mx-auto max-w-xl">
+        <div class="eyebrow">Our Story</div>
+        <h1 class="font-serif text-5xl font-bold">50 years of <em class="text-moss not-italic">showing up.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-lg">Since 1976, PERMA has stood beside individuals and families facing hardship — not just in moments of crisis, but for the long haul.</p>
+        <div class="flex gap-4 flex-wrap mt-7">
+          <a href="#" class="btn btn-green" onclick="showPage('donate');return false">Donate Now →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('getinvolved');return false">Get Involved</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY + PURPOSE -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
+        <div>
+          <div class="eyebrow">Our Purpose</div>
+          <h2 class="font-serif text-4xl font-bold">Why <em class="text-moss not-italic">PERMA exists.</em></h2>
+          <p class="text-mist leading-relaxed mt-3 mb-4">PERMA was founded on a quiet but powerful conviction: that <strong class="text-ink">no one should be left behind.</strong> For 50 years we have served Malaysians of every background — with urgency, dignity, and long-term commitment.</p>
+          <p class="text-mist leading-relaxed mb-6">Our work is guided by the belief that dignity is not a privilege. It is a right.</p>
+          <a href="#" class="btn btn-green" onclick="showPage('work');return false">See How We Work →</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="quote-card"><blockquote class="font-serif italic leading-relaxed text-ink mb-2">"PERMA exists to ensure that individuals and families facing hardship are not overlooked — by stepping in with timely support, compassion, and long-term commitment."</blockquote><cite class="text-xs uppercase tracking-widest text-terra font-extrabold not-italic">Purpose</cite></div>
+          <div class="quote-card"><blockquote class="font-serif italic leading-relaxed text-ink mb-2">"A community where everyone has the opportunity to live with dignity, health, and hope."</blockquote><cite class="text-xs uppercase tracking-widest text-terra font-extrabold not-italic">Vision</cite></div>
+          <div class="quote-card"><blockquote class="font-serif italic leading-relaxed text-ink mb-2">"To support individuals and families in need through welfare, health, and capacity-building — delivered with dignity and care."</blockquote><cite class="text-xs uppercase tracking-widest text-terra font-extrabold not-italic">Mission</cite></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="bg-ink text-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 fade-up">
+        <div>
+          <div class="eyebrow" style="color:#B8892A">Our History</div>
+          <h2 class="font-serif text-4xl font-bold text-white">Five decades of <em class="text-gold not-italic">care.</em></h2>
+          <p class="text-white/60 mt-3 max-w-xs leading-relaxed">From a small founding team to a national network — the milestones that shaped PERMA.</p>
+        </div>
+        <div class="relative pl-8 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-px before:bg-white/10">
+          <div class="tl-item"><div class="tl-year">1976</div><h3 class="text-white font-semibold mb-1">PERMA is Founded</h3><p class="text-white/50 text-sm leading-relaxed">A small team with a clear conviction — serve all Malaysians facing hardship, without condition.</p></div>
+          <div class="tl-item"><div class="tl-year">1980s</div><h3 class="text-white font-semibold mb-1">Welfare Programmes Expand</h3><p class="text-white/50 text-sm leading-relaxed">Structured food aid, financial support, and crisis response formalised as core offerings.</p></div>
+          <div class="tl-item"><div class="tl-year">1990s</div><h3 class="text-white font-semibold mb-1">Health Initiatives Launched</h3><p class="text-white/50 text-sm leading-relaxed">Screening, prevention, and mental wellbeing support introduced — caring for the whole person.</p></div>
+          <div class="tl-item"><div class="tl-year">2000s</div><h3 class="text-white font-semibold mb-1">Capacity Building Takes Root</h3><p class="text-white/50 text-sm leading-relaxed">Education, skills training, sports, and the arts — building opportunity, not just relief.</p></div>
+          <div class="tl-item pb-0"><div class="tl-year">Today</div><h3 class="text-white font-semibold mb-1">50 Years Strong</h3><p class="text-white/50 text-sm leading-relaxed">A nationwide network — still showing up, still committed, still growing.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="bg-cream py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="eyebrow">Our Values</div>
+        <h2 class="font-serif text-4xl font-bold">How we <em class="text-moss not-italic">work.</em></h2>
+        <p class="text-mist mt-3 max-w-lg leading-relaxed">Our values aren't a wall poster. They're how we show up in every conversation, every programme, and every act of support.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+          <div class="value-card"><div class="font-serif text-5xl font-bold text-moss/10 leading-none mb-2">01</div><h3 class="text-moss font-serif font-semibold mb-2">Compassion</h3><p class="text-mist text-sm leading-relaxed">We serve with empathy, care, and respect — meeting people where they are.</p></div>
+          <div class="value-card"><div class="font-serif text-5xl font-bold text-moss/10 leading-none mb-2">02</div><h3 class="text-moss font-serif font-semibold mb-2">Responsiveness</h3><p class="text-mist text-sm leading-relaxed">We act quickly when needs arise, because the timing of help matters enormously.</p></div>
+          <div class="value-card"><div class="font-serif text-5xl font-bold text-moss/10 leading-none mb-2">03</div><h3 class="text-moss font-serif font-semibold mb-2">Dignity</h3><p class="text-mist text-sm leading-relaxed">We help without judgement, always honouring the individual.</p></div>
+          <div class="value-card"><div class="font-serif text-5xl font-bold text-moss/10 leading-none mb-2">04</div><h3 class="text-moss font-serif font-semibold mb-2">Commitment</h3><p class="text-mist text-sm leading-relaxed">We stay the course — support doesn't end when the immediate crisis does.</p></div>
+          <div class="value-card"><div class="font-serif text-5xl font-bold text-moss/10 leading-none mb-2">05</div><h3 class="text-moss font-serif font-semibold mb-2">Integrity</h3><p class="text-mist text-sm leading-relaxed">We are accountable, transparent, and responsible with every resource entrusted to us.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSONALITY -->
+    <div class="bg-moss text-white py-20 px-6 text-center">
+      <div class="eyebrow justify-center" style="color:#B8892A">How We Sound</div>
+      <h2 class="font-serif text-4xl font-bold text-white max-w-lg mx-auto">Warm. Calm. <em class="text-gold not-italic">Human.</em></h2>
+      <p class="text-white/70 max-w-md mx-auto mt-3 mb-12">Everything PERMA communicates reflects these qualities.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left fade-up">
+        <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Warm &amp; Human</h3><p class="text-white/60 text-sm leading-relaxed">We speak like people, not institutions. Kind, direct, and always centred on the individual.</p></div>
+        <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Trustworthy &amp; Grounded</h3><p class="text-white/60 text-sm leading-relaxed">50 years of action speaks louder than any claim. We let our work make the case.</p></div>
+        <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Respectful, Never Sensational</h3><p class="text-white/60 text-sm leading-relaxed">We tell stories with dignity. We never exploit hardship to attract attention.</p></div>
+        <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Confident Through Experience</h3><p class="text-white/60 text-sm leading-relaxed">Our confidence comes from five decades of community work — not hype or marketing language.</p></div>
+      </div>
+    </div>
+
+    <!-- PROMISE + FOOTER -->
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block" onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a><p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare, health, and capacity-building — delivered with dignity and care.</p><p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others don't.</p></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li></ul></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li></ul></div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3"><p class="text-xs">© 2025 PERMA. All rights reserved.</p><p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p></div>
+      </div>
+    </footer>
+  </div><!-- /page-about -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: OUR WORK
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-work" class="page">
+
+    <div class="page-banner">
+      <div class="max-w-6xl mx-auto max-w-xl">
+        <div class="eyebrow">What We Do</div>
+        <h1 class="font-serif text-5xl font-bold">Three pillars, <em class="text-moss not-italic">one mission.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-lg">PERMA's work is structured around three core areas — each essential to building communities where no one is left behind.</p>
+        <div class="flex gap-4 flex-wrap mt-7">
+          <a href="#" class="btn btn-green" onclick="showPage('donate');return false">Donate Now →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('getinvolved');return false">Volunteer</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 1 -->
+    <div class="bg-white py-20 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
+        <div>
+          <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">01</div>
+          <div class="eyebrow">Core Pillar One</div>
+          <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Welfare</em></h2>
+          <p class="text-mist leading-relaxed mt-3 mb-6">When hardship strikes, PERMA responds quickly and without condition. Our welfare programmes deliver immediate, practical support to those who need it most.</p>
+          <div class="flex flex-col gap-3">
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🍱</span><div><h4 class="font-bold text-sm mb-1">Food Aid</h4><p class="text-mist text-sm leading-relaxed">Regular meal distribution and food basket programmes for families facing food insecurity.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">💰</span><div><h4 class="font-bold text-sm mb-1">Financial Assistance</h4><p class="text-mist text-sm leading-relaxed">Emergency support for essential needs — rent, utilities, medical bills, and more.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🏠</span><div><h4 class="font-bold text-sm mb-1">Crisis Response</h4><p class="text-mist text-sm leading-relaxed">Rapid deployment during acute crises, including floods, fires, and sudden family emergencies.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">👴</span><div><h4 class="font-bold text-sm mb-1">Elderly &amp; Differently-Abled Care</h4><p class="text-mist text-sm leading-relaxed">Targeted welfare for elderly individuals and those with disabilities who face additional barriers.</p></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden min-h-72 bg-moss-light flex items-end p-8 relative">
+          <img src="/src/assets/meal2.jpg" alt="Welfare outreach" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-moss-light/75"></div>
+          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-3xl font-bold text-moss mb-1">12K+</div><div class="text-mist text-sm">Families supported through welfare programmes annually</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 2 -->
+    <div class="bg-cream py-20 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
+        <div class="rounded-2xl overflow-hidden min-h-72 bg-ink flex items-end p-8 order-last md:order-first relative">
+          <img src="/src/assets/health.jpg" alt="Health programme activity" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-ink/65"></div>
+          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-2xl font-bold text-gold mb-1">Early detection</div><div class="text-mist text-sm">saves lives — our screenings reach thousands who would otherwise go undiagnosed</div></div>
+        </div>
+        <div>
+          <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">02</div>
+          <div class="eyebrow">Core Pillar Two</div>
+          <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Health</em></h2>
+          <p class="text-mist leading-relaxed mt-3 mb-6">PERMA believes prevention is as important as cure. Our health programmes focus on early detection, community education, and mental wellbeing.</p>
+          <div class="flex flex-col gap-3">
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🩺</span><div><h4 class="font-bold text-sm mb-1">Health Screenings</h4><p class="text-mist text-sm leading-relaxed">Free community screenings for chronic conditions including diabetes, hypertension, and cancer.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🧠</span><div><h4 class="font-bold text-sm mb-1">Mental Wellbeing</h4><p class="text-mist text-sm leading-relaxed">Counselling, support groups, and awareness programmes addressing mental health needs.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">📚</span><div><h4 class="font-bold text-sm mb-1">Health Education</h4><p class="text-mist text-sm leading-relaxed">Community workshops on nutrition, hygiene, reproductive health, and disease prevention.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">👶</span><div><h4 class="font-bold text-sm mb-1">Child &amp; Maternal Health</h4><p class="text-mist text-sm leading-relaxed">Support programmes focused on healthy development from early childhood through adolescence.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 3 -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
+        <div>
+          <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">03</div>
+          <div class="eyebrow">Core Pillar Three</div>
+          <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Capacity Building</em></h2>
+          <p class="text-mist leading-relaxed mt-3 mb-6">Lasting change requires more than immediate relief. PERMA invests in education, skills, sports, and the arts — creating pathways beyond hardship.</p>
+          <div class="flex flex-col gap-3">
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🎓</span><div><h4 class="font-bold text-sm mb-1">Education Support</h4><p class="text-mist text-sm leading-relaxed">Scholarships, tutoring, and school supply programmes that keep children in education.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🛠️</span><div><h4 class="font-bold text-sm mb-1">Vocational Skills Training</h4><p class="text-mist text-sm leading-relaxed">Practical skills in trades, technology, and entrepreneurship that open doors to sustainable livelihoods.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">⚽</span><div><h4 class="font-bold text-sm mb-1">Sports Programmes</h4><p class="text-mist text-sm leading-relaxed">Community sports initiatives that build discipline, teamwork, and confidence in young people.</p></div></div>
+            <div class="prog-item"><span class="text-2xl flex-shrink-0">🎨</span><div><h4 class="font-bold text-sm mb-1">Arts &amp; Culture</h4><p class="text-mist text-sm leading-relaxed">Creative programmes that foster expression, identity, and community pride — especially for youth.</p></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden min-h-72 bg-gold-pale flex items-end p-8 relative">
+          <img src="/src/assets/education.jpg" alt="Capacity building programme" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gold-pale/80"></div>
+          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-2xl font-bold text-terra mb-1">Long-term</div><div class="text-mist text-sm">Our capacity building programmes create change that outlasts any single act of assistance</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACT NUMBERS -->
+    <div class="bg-ink text-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="eyebrow" style="color:#B8892A">Our Impact</div>
+        <h2 class="font-serif text-4xl font-bold text-white mb-3">The work, <em class="text-gold not-italic">in numbers.</em></h2>
+        <p class="text-white/60 max-w-xl mb-12">A snapshot of what 50 years of sustained commitment looks like — across all three pillars.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden" style="gap:1.5px;background:rgba(255,255,255,.1)">
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">250K+</div><div class="text-white/50 text-sm">Meals served annually through Welfare</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">12K+</div><div class="text-white/50 text-sm">Families supported each year</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">800+</div><div class="text-white/50 text-sm">Volunteers powering our programmes</div></div>
+          <div class="stat-dark-cell"><div class="font-serif text-4xl font-bold text-gold mb-1">50+</div><div class="text-white/50 text-sm">Communities reached across Malaysia</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block" onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a><p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare, health, and capacity-building.</p><p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others don't.</p></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li></ul></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li></ul></div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3"><p class="text-xs">© 2025 PERMA. All rights reserved.</p><p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p></div>
+      </div>
+    </footer>
+  </div><!-- /page-work -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: GET INVOLVED
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-getinvolved" class="page">
+
+    <div class="page-banner">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow">Get Involved</div>
+        <h1 class="font-serif text-5xl font-bold">Be part of <em class="text-moss not-italic">what's next.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-lg">There are many ways to stand with PERMA — and with the communities we serve.</p>
+      </div>
+    </div>
+
+    <!-- 3 WAYS -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow">Ways to Help</div>
+        <h2 class="font-serif text-4xl font-bold">Choose how you want to <em class="text-moss not-italic">make a difference.</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 fade-up">
+          <div class="rounded-xl overflow-hidden border border-border hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
+            <div class="bg-cream p-7"><div class="text-3xl mb-3">💚</div><h3 class="font-serif text-xl font-semibold mb-2">Donate</h3><p class="text-mist text-sm leading-relaxed">Every ringgit goes directly to welfare, health, and education programmes that change lives.</p></div>
+            <div class="bg-moss px-7 py-3 flex items-center justify-between"><a href="#" class="text-white text-sm font-extrabold" onclick="showPage('donate');return false">Give today</a><span class="text-white/60">→</span></div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-border hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
+            <div class="bg-cream p-7"><div class="text-3xl mb-3">🙌</div><h3 class="font-serif text-xl font-semibold mb-2">Volunteer</h3><p class="text-mist text-sm leading-relaxed">Join 800+ volunteers giving their time, skill, and heart to communities across Malaysia.</p></div>
+            <div class="bg-moss px-7 py-3 flex items-center justify-between"><a href="#vol-form" class="text-white text-sm font-extrabold">Register below</a><span class="text-white/60">→</span></div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-border hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
+            <div class="bg-cream p-7"><div class="text-3xl mb-3">🤝</div><h3 class="font-serif text-xl font-semibold mb-2">Partner</h3><p class="text-mist text-sm leading-relaxed">Organisations that share our values can join as corporate, institutional, or NGO partners.</p></div>
+            <div class="bg-moss px-7 py-3 flex items-center justify-between"><a href="#partner" class="text-white text-sm font-extrabold">Learn more</a><span class="text-white/60">→</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLUNTEER -->
+    <div class="bg-cream py-20 px-6 md:px-12" id="vol-form">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 fade-up">
+        <div>
+          <div class="eyebrow">Volunteer</div>
+          <h2 class="font-serif text-4xl font-bold">Give your <em class="text-moss not-italic">time.</em></h2>
+          <p class="text-mist mt-3 mb-6 leading-relaxed">Our 800+ volunteers are the backbone of PERMA's work. Whether it's a few hours a month or a long-term commitment, there is a role for you.</p>
+          <div class="flex flex-col gap-3">
+            <div class="role-item"><span class="text-2xl flex-shrink-0">🍱</span><div><h4 class="font-bold text-sm mb-1">Food &amp; Welfare Distribution</h4><p class="text-mist text-sm leading-relaxed">Help pack and distribute food aid and welfare packs to families in need.</p></div></div>
+            <div class="role-item"><span class="text-2xl flex-shrink-0">📖</span><div><h4 class="font-bold text-sm mb-1">Education &amp; Tutoring</h4><p class="text-mist text-sm leading-relaxed">Support children and youth with academic tutoring and skills coaching.</p></div></div>
+            <div class="role-item"><span class="text-2xl flex-shrink-0">🏥</span><div><h4 class="font-bold text-sm mb-1">Health Outreach</h4><p class="text-mist text-sm leading-relaxed">Assist with community health screenings and wellness events.</p></div></div>
+            <div class="role-item"><span class="text-2xl flex-shrink-0">📸</span><div><h4 class="font-bold text-sm mb-1">Communications &amp; Events</h4><p class="text-mist text-sm leading-relaxed">Use your creative or organisational skills to support PERMA's campaigns.</p></div></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-10 border border-border">
+          <h3 class="font-serif text-2xl font-bold mb-1">Register as a Volunteer</h3>
+          <p class="text-mist text-sm mb-7">Fill in the form and our team will be in touch with next steps.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Ali"/></div>
+            <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Hassan"/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="ali@example.com"/></div>
+          <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="+60 12 345 6789"/></div>
+          <div class="form-group"><label class="form-label">Area of Interest</label><select class="form-input"><option>Food &amp; Welfare Distribution</option><option>Education &amp; Tutoring</option><option>Health Outreach</option><option>Communications &amp; Events</option><option>Open to any role</option></select></div>
+          <div class="form-group"><label class="form-label">Tell us about yourself</label><textarea class="form-input min-h-28 resize-y" placeholder="Why you'd like to volunteer, skills, availability..."></textarea></div>
+          <button class="btn btn-green w-full justify-center border-none">Submit Application →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTNER -->
+    <div class="bg-ink text-white py-20 px-6 md:px-12" id="partner">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow" style="color:#B8892A">Partner With Us</div>
+        <h2 class="font-serif text-4xl font-bold text-white mb-3">Extend your <em class="text-gold not-italic">impact.</em></h2>
+        <p class="text-white/60 max-w-xl mb-12">Organisations that share our values are welcome to partner with PERMA.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up">
+          <div class="pers-card"><div class="text-3xl mb-3">🏢</div><h3 class="text-gold font-serif font-semibold mb-2">Corporate Partnerships</h3><p class="text-white/60 text-sm leading-relaxed">CSR programmes, staff volunteering, matched giving, and cause-related marketing.</p></div>
+          <div class="pers-card"><div class="text-3xl mb-3">🏛️</div><h3 class="text-gold font-serif font-semibold mb-2">Government &amp; Institutional</h3><p class="text-white/60 text-sm leading-relaxed">Collaborative delivery leveraging PERMA's community reach and 50 years of trust.</p></div>
+          <div class="pers-card"><div class="text-3xl mb-3">🤝</div><h3 class="text-gold font-serif font-semibold mb-2">NGO &amp; Community</h3><p class="text-white/60 text-sm leading-relaxed">Joint programmes, referral networks, and shared resources with aligned organisations.</p></div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-6 bg-white/5 border border-white/10 rounded-2xl p-8 mt-8">
+          <p class="font-serif italic text-white/80 max-w-lg">"If your organisation believes no one should fall through the cracks, we'd like to talk."</p>
+          <a href="#contact" class="btn btn-terra">Get in touch →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="bg-white py-20 px-6 md:px-12" id="contact">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 fade-up">
+        <div>
+          <div class="eyebrow">Contact Us</div>
+          <h2 class="font-serif text-4xl font-bold">Let's <em class="text-moss not-italic">connect.</em></h2>
+          <p class="text-mist mt-3 mb-7 leading-relaxed">Whether you have a question, want to discuss a partnership, or simply want to learn more — we'd love to hear from you.</p>
+          <div class="flex flex-col gap-4">
+            <div class="flex gap-4 items-start"><div class="w-10 h-10 rounded-xl bg-moss-light flex items-center justify-center text-lg flex-shrink-0">📍</div><div><label class="block text-xs uppercase tracking-widest text-terra font-extrabold mb-0.5">Address</label><p class="text-sm text-ink leading-snug">PERMA Headquarters<br>Kuala Lumpur, Malaysia</p></div></div>
+            <div class="flex gap-4 items-start"><div class="w-10 h-10 rounded-xl bg-moss-light flex items-center justify-center text-lg flex-shrink-0">📞</div><div><label class="block text-xs uppercase tracking-widest text-terra font-extrabold mb-0.5">Phone</label><p class="text-sm text-ink">+60 3 XXXX XXXX</p></div></div>
+            <div class="flex gap-4 items-start"><div class="w-10 h-10 rounded-xl bg-moss-light flex items-center justify-center text-lg flex-shrink-0">✉️</div><div><label class="block text-xs uppercase tracking-widest text-terra font-extrabold mb-0.5">Email</label><p class="text-sm text-ink">info@perma.org.my</p></div></div>
+            <div class="flex gap-4 items-start"><div class="w-10 h-10 rounded-xl bg-moss-light flex items-center justify-center text-lg flex-shrink-0">🕐</div><div><label class="block text-xs uppercase tracking-widest text-terra font-extrabold mb-0.5">Office Hours</label><p class="text-sm text-ink">Monday – Friday, 9am – 5pm</p></div></div>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl p-10 border border-border">
+          <h3 class="font-serif text-2xl font-bold mb-1">Send a Message</h3>
+          <p class="text-mist text-sm mb-7">We aim to respond within 2 working days.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" placeholder="Your name"/></div>
+            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="your@email.com"/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Subject</label><select class="form-input"><option>General Enquiry</option><option>Volunteering</option><option>Partnerships</option><option>Donations</option><option>Media &amp; Press</option></select></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-input min-h-28 resize-y" placeholder="How can we help?"></textarea></div>
+          <button class="btn btn-green w-full justify-center border-none">Send Message →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block" onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a><p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare, health, and capacity-building.</p><p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others don't.</p></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li></ul></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li></ul></div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3"><p class="text-xs">© 2025 PERMA. All rights reserved.</p><p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p></div>
+      </div>
+    </footer>
+  </div><!-- /page-getinvolved -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: DONATE
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-donate" class="page">
+
+    <div class="bg-gold-pale pt-28 pb-16 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto max-w-xl">
+        <div class="eyebrow">Make a Difference</div>
+        <h1 class="font-serif text-5xl font-bold">Your support reaches <em class="text-moss not-italic">where it's needed most.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-lg">Every contribution goes directly to welfare, health, and capacity-building programmes that change lives across Malaysia.</p>
+      </div>
+    </div>
+
+    <!-- MAIN DONATE -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 fade-up">
+        <!-- Left: why -->
+        <div>
+          <div class="eyebrow">Why Donate</div>
+          <h2 class="font-serif text-4xl font-bold">Your ringgit <em class="text-moss not-italic">goes far.</em></h2>
+          <p class="text-mist mt-3 mb-6 leading-relaxed">PERMA has operated with integrity and transparency for 50 years. We are stewards of every resource entrusted to us.</p>
+          <div class="flex flex-col gap-3 mb-6">
+            <div class="flex items-center gap-5 bg-cream rounded-xl p-4 border border-border"><span class="font-serif text-xl font-bold text-moss whitespace-nowrap min-w-16">RM 20</span><p class="text-mist text-sm leading-relaxed"><strong class="text-ink">Provides a family with food essentials</strong> for a week through our welfare distribution programme.</p></div>
+            <div class="flex items-center gap-5 bg-cream rounded-xl p-4 border border-border"><span class="font-serif text-xl font-bold text-moss whitespace-nowrap min-w-16">RM 50</span><p class="text-mist text-sm leading-relaxed"><strong class="text-ink">Funds a health screening</strong> for one individual — potentially catching a condition before it becomes critical.</p></div>
+            <div class="flex items-center gap-5 bg-cream rounded-xl p-4 border border-border"><span class="font-serif text-xl font-bold text-moss whitespace-nowrap min-w-16">RM 100</span><p class="text-mist text-sm leading-relaxed"><strong class="text-ink">Supports one month of tutoring</strong> for a child from a low-income family.</p></div>
+            <div class="flex items-center gap-5 bg-cream rounded-xl p-4 border border-border"><span class="font-serif text-xl font-bold text-moss whitespace-nowrap min-w-16">RM 250</span><p class="text-mist text-sm leading-relaxed"><strong class="text-ink">Covers emergency financial assistance</strong> for a family facing sudden hardship.</p></div>
+          </div>
+          <ul class="border-t border-border pt-6 flex flex-col gap-2">
+            <li class="flex items-center gap-3 text-mist text-sm"><span class="text-moss font-extrabold">✓</span> 100% of donations go directly to programmes</li>
+            <li class="flex items-center gap-3 text-mist text-sm"><span class="text-moss font-extrabold">✓</span> Tax-deductible giving (confirm with PERMA)</li>
+            <li class="flex items-center gap-3 text-mist text-sm"><span class="text-moss font-extrabold">✓</span> Fully transparent — annual reports published</li>
+            <li class="flex items-center gap-3 text-mist text-sm"><span class="text-moss font-extrabold">✓</span> 50 years of accountable stewardship</li>
+          </ul>
+        </div>
+        <!-- Right: QR + transfer proof form -->
+        <div class="bg-cream rounded-2xl p-8 border border-border md:sticky md:top-24">
+          <h3 class="font-serif text-2xl font-bold mb-1">Scan QR and submit transfer proof</h3>
+          <p class="text-mist text-sm mb-5">PERMA currently receives donations via QR transfer. After payment, submit your details and receipt.</p>
+
+          <div class="bg-white rounded-2xl p-6 border border-border text-center mb-6">
+            <img src="/src/assets/sampleQR.png" alt="PERMA donation QR" class="w-52 h-52 mx-auto object-contain mb-3" />
+            <p class="text-mist text-sm mb-3">Scan with your banking app or e-wallet</p>
+            <a href="/src/assets/sampleQR.png" download="PERMA_QR.png" class="btn btn-outline">Download QR Code</a>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Ali"/></div>
+            <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Hassan"/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="ali@example.com"/></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+60 12 345 6789"/></div>
+          <div class="form-group"><label class="form-label">Amount Transferred (RM)</label><input type="number" min="1" class="form-input" placeholder="e.g. 150"/></div>
+          <div class="form-group"><label class="form-label">Transfer Date</label><input type="date" class="form-input"/></div>
+          <div class="form-group"><label class="form-label">Upload Receipt</label><input type="file" accept="image/*,.pdf" class="form-input"/></div>
+          <button class="w-full py-4 bg-moss text-white rounded-full font-extrabold text-base cursor-pointer border-none hover:bg-moss-mid transition-colors mt-2">Submit Transfer Details →</button>
+          <p class="text-center text-mist text-xs mt-3">Our team will verify and acknowledge your contribution.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHER WAYS -->
+    <div class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow">Other Ways to Give</div>
+        <h2 class="font-serif text-4xl font-bold">More ways to <em class="text-moss not-italic">support PERMA.</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 fade-up">
+          <div class="bg-white rounded-2xl border border-border p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md"><div class="text-3xl mb-3">🏦</div><h3 class="font-serif text-xl font-semibold mb-2">Bank Transfer</h3><p class="text-mist text-sm leading-relaxed mb-4">Prefer to give via direct bank transfer? Contact us and we'll send our banking details with a receipt.</p><a href="#" onclick="showContactSection();return false" class="btn btn-outline text-sm py-2 px-4">Get bank details →</a></div>
+          <div class="bg-white rounded-2xl border border-border p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md"><div class="text-3xl mb-3">🏢</div><h3 class="font-serif text-xl font-semibold mb-2">Corporate Giving</h3><p class="text-mist text-sm leading-relaxed mb-4">Looking to make a larger organisational contribution or set up a structured CSR partnership?</p><a href="#" onclick="showContactSection();return false" class="btn btn-outline text-sm py-2 px-4">Talk to us →</a></div>
+          <div class="bg-white rounded-2xl border border-border p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md"><div class="text-3xl mb-3">🎁</div><h3 class="font-serif text-xl font-semibold mb-2">Give in Kind</h3><p class="text-mist text-sm leading-relaxed mb-4">Donations of food, clothing, equipment, or professional services are also welcomed.</p><a href="#" onclick="showContactSection();return false" class="btn btn-outline text-sm py-2 px-4">Contact us →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCOUNTABILITY -->
+    <div class="bg-ink text-white py-20 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow" style="color:#B8892A">How We Use Your Donation</div>
+        <h2 class="font-serif text-4xl font-bold text-white mb-3">Every ringgit, <em class="text-gold not-italic">accounted for.</em></h2>
+        <p class="text-white/60 max-w-xl mb-12">We hold ourselves to the highest standards of financial transparency and responsible stewardship.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up">
+          <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Direct Programme Funding</h3><p class="text-white/60 text-sm leading-relaxed">The vast majority of every donation goes directly to welfare, health, and capacity building programmes.</p></div>
+          <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Annual Reports</h3><p class="text-white/60 text-sm leading-relaxed">We publish annual reports detailing how funds were received and allocated. Transparency is a core value.</p></div>
+          <div class="pers-card"><h3 class="text-gold font-serif font-semibold mb-2">Follow Our Journey</h3><p class="text-white/60 text-sm leading-relaxed">See the impact of every contribution — stories and programme updates shared regularly on Facebook and Instagram.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block" onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a><p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare, health, and capacity-building.</p><p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others don't.</p></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li><li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li></ul></div>
+          <div><h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5><ul class="space-y-2 text-sm"><li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li><li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li></ul></div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3"><p class="text-xs">© 2025 PERMA. All rights reserved.</p><p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p></div>
+      </div>
+    </footer>
+  </div><!-- /page-donate -->
 
   <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
