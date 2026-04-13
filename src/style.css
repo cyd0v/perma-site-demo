@@ -227,3 +227,113 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Navbar scroll shadow ─────────────────── */
 #navbar.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+
+/* ── Accordion ───────────────────────────── */
+.accordion-item {
+  transition: all .25s ease;
+}
+.accordion-header {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.accordion-header.accordion-open {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.accordion-header:focus {
+  outline: 2px solid #2E6B47;
+  outline-offset: -2px;
+}
+.accordion-content {
+  max-height: 0;
+  transition: max-height .3s ease, opacity .3s ease;
+  opacity: 0;
+}
+.accordion-content.show {
+  max-height: 1200px;
+  opacity: 1;
+}
+.accordion-icon {
+  display: inline-block;
+  font-size: .75rem;
+}
+.accordion-icon.open {
+  transform: rotate(-180deg);
+}
+
+/* ── Nested Accordion ────────────────────── */
+.nested-accordion-item {
+  transition: all .2s ease;
+}
+.nested-header {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: .9rem;
+}
+.nested-header:focus {
+  outline: 1px solid #2E6B47;
+  outline-offset: -1px;
+}
+.nested-content {
+  max-height: 0;
+  transition: max-height .25s ease, opacity .25s ease;
+  opacity: 0;
+  overflow: hidden;
+}
+.nested-content.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* ── Image Carousel ──────────────────────── */
+.carousel-container {
+  position: relative;
+  background: #E5E5E5;
+  overflow: hidden;
+}
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.carousel-img.active {
+  position: relative;
+  opacity: 1;
+  z-index: 10;
+}
+.carousel-btn {
+  z-index: 20;
+  font-size: 1.2rem;
+  padding: .5rem .65rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.carousel-btn:focus {
+  outline: 2px solid #2E6B47;
+}
+.carousel-dots {
+  z-index: 20;
+}
+.carousel-dot {
+  transition: background .2s ease, transform .2s ease;
+  cursor: pointer;
+}
+.carousel-dot:hover {
+  transform: scale(1.2);
+}
+.carousel-dot.active {
+  background-color: #fff !important;
+}

@@ -319,23 +319,216 @@
 
     <!-- PILLAR 1 -->
     <div class="bg-white py-20 px-6 md:px-12 border-b border-border">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
-        <div>
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="mb-16">
           <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">01</div>
           <div class="eyebrow">Core Pillar One</div>
           <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Welfare</em></h2>
-          <p class="text-mist leading-relaxed mt-3 mb-6">When hardship strikes, PERMA responds quickly and without condition. Our welfare programmes deliver immediate, practical support to those who need it most.</p>
-          <div class="flex flex-col gap-3">
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🍱</span><div><h4 class="font-bold text-sm mb-1">Food Aid</h4><p class="text-mist text-sm leading-relaxed">Regular meal distribution and food basket programmes for families facing food insecurity.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">💰</span><div><h4 class="font-bold text-sm mb-1">Financial Assistance</h4><p class="text-mist text-sm leading-relaxed">Emergency support for essential needs — rent, utilities, medical bills, and more.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🏠</span><div><h4 class="font-bold text-sm mb-1">Crisis Response</h4><p class="text-mist text-sm leading-relaxed">Rapid deployment during acute crises, including floods, fires, and sudden family emergencies.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">👴</span><div><h4 class="font-bold text-sm mb-1">Elderly &amp; Differently-Abled Care</h4><p class="text-mist text-sm leading-relaxed">Targeted welfare for elderly individuals and those with disabilities who face additional barriers.</p></div></div>
+          <p class="text-mist leading-relaxed mt-3 mb-8">When hardship strikes, PERMA responds quickly and without condition. Our welfare programmes deliver immediate, practical support to those who need it most.</p>
+          
+          <!-- ACCORDION CONTAINER -->
+          <div class="space-y-3">
+            <!-- FOOD AID -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3"><span class="text-2xl">🍱</span><span>Food Aid</span></span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Distribution Programme</h4>
+                      <p class="text-mist leading-relaxed mb-4">On Sunday, 28 April 2024, PERMA distributed dry food worth <strong>RM17,000</strong> to <strong>100 underprivileged families</strong> in Dengkil as part of its bi-annual community outreach. PERMA committee members were present to hand over the packed groceries to the families. Lunch was served for all 100 families present.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        📊 Impact: 100 families | 📅 28 April 2024 | 💰 RM17,000
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Food Aid/food1.jpg" alt="Food distribution" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Food Aid/food2.jpg" alt="Food packages" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Food Aid/food3.jpg" alt="Community gathering" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Food Aid/food4.jpg" alt="Family receiving aid" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Food Aid/food5.jpg" alt="Distribution ceremony" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FINANCIAL ASSISTANCE -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3"><span class="text-2xl">💰</span><span>Financial Assistance</span></span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Essential Equipment for Mary Orphanage</h4>
+                      <p class="text-mist leading-relaxed mb-4">The Mary Orphanage, a well-run shelter for around 50 boys and girls, requested a replacement vegetable chiller. PERMA purchased a new 2-door chiller at a cost of <strong>RM2,450</strong>, delivered on 19 January 2024. A donor also kindly donated a rice cooker and blender. Committee members attended the handover ceremony.</p>
+                      <p class="text-mist leading-relaxed mb-4">Additionally, our Welfare Chairperson, Ms Vimala, secured a generous donor who contributed <strong>RM1,014</strong> to cover dry provisions requested by the orphanage.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🏪 Equipment: Chiller System | 📅 19 January 2024 | 💰 RM3,464 total
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial1.jpg" alt="Chiller equipment" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial2.jpg" alt="Equipment delivery" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial3.jpg" alt="Installation" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial4.jpg" alt="Handover ceremony" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial5.jpg" alt="Recipients" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial6.jpg" alt="Community impact" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Financial assistance to buy essential need items/financial7.jpg" alt="Follow-up visit" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 6)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CRISIS RESPONSE -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3"><span class="text-2xl">🏠</span><span>Crisis Response</span></span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <h4 class="font-serif text-lg font-bold text-moss mb-3">COVID-19 MCO Emergency Response (11 Weeks)</h4>
+                  <p class="text-mist leading-relaxed mb-6">During the COVID-19 MCO period, PERMA successfully completed <strong>17 comprehensive projects within just 11 weeks</strong> to support families severely affected by the crisis. These initiatives provided timely assistance and relief, demonstrating PERMA's swift response and strong commitment to helping communities in times of crisis.</p>
+                  
+                  <div class="space-y-4">
+                    <div class="bg-white rounded-lg border border-border/60 p-3">
+                      <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Crisis Response Video</p>
+                      <video class="w-full rounded-md" controls preload="metadata">
+                        <source src="/src/assets/Crisis Response/Crisis Response.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="space-y-2 max-h-[500px] overflow-y-auto pr-1">
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>4 Apr 2020:</strong> B40 Families, Ladang Glenmarie &amp; Desa Mentari - Food aid for 136 families (RM13,668)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>11 Apr 2020:</strong> PPE suits distribution - 800 suits for frontline workers (RM5,000)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>15 Apr 2020:</strong> Dengkil rice distribution - 150 families supported (RM3,900)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>18 Apr 2020:</strong> Sri Sentosa low-cost flats - Food aid for 100 families (RM7,040)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>24 Apr 2020:</strong> Stray dogs feeding - Food for 80 stray dogs (RM1,676.50)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>24 Apr 2020:</strong> Kechara Soup Kitchen - Food aid for 100 families (RM2,645)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>28 Apr 2020:</strong> Pertiwi Soup Kitchen partnership - 1,000 meals sponsored with BAC (RM2,500)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>30 Apr 2020:</strong> Orang Asli settlements - 133 families reached across 6 settlements (RM5,003.80)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>9 May 2020:</strong> Refugee family support - Aid for 100 families in 6 locations (RM7,991)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>10 May 2020:</strong> Repatriation assistance - Partial flight support for Sri Lankan returnee (RM696)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>21 May 2020:</strong> Paya Jaras &amp; Kota Damansara - Food aid and masks for 100 B40 families (RM8,002)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>22 May 2020:</strong> Single mothers &amp; DV survivors - Aid and masks for 100 women (RM10,110)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>27 May 2020:</strong> Old folk's home support - Washing machine donation and lunch for 35 residents (RM1,450)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>6 Jun 2020:</strong> Makepeace Lodge initiative - Food aid for 47 families (RM4,722)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>9 Jun 2020:</strong> Heineken grocery support - RM100 credits for 60 families (RM6,000)</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>19-24 Jun 2020:</strong> Single mothers cash assistance - RM6,000 distributed across 20 mothers</p></div>
+                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>21 Jun 2020:</strong> Hygiene kits distribution - RM7,500 raised for 250 kits</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ELDERLY & DIFFERENTLY-ABLED -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3"><span class="text-2xl">👴</span><span>Elderly & Differently-Abled Care</span></span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Health Screening Programme for Elderly</h4>
+                      <p class="text-mist leading-relaxed mb-4"><strong>National Cancer Society Partnership</strong></p>
+                      <p class="text-mist leading-relaxed mb-4">Mammogram screening for <strong>27 ladies from underprivileged backgrounds</strong> was successfully carried out at the National Cancer Society. Transport was provided to NCS for all participants. Lunch was served for all ladies after the screening was completed. This important programme is carried out <strong>annually</strong> to ensure early detection and prevention.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🏥 Health Screening | 👥 27 women | 🚌 Transport Provided
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Health Screening/health1.jpg" alt="Health screening" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Health Screening/health2.jpg" alt="Screening process" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health3.jpg" alt="Participants" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health4.jpg" alt="Medical check-up" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health5.jpg" alt="Healthcare team" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health6.jpg" alt="Group photo" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6 bg-white rounded-lg border border-border/60 p-3">
+                    <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Differently-Abled Programme Video</p>
+                    <video class="w-full rounded-md" controls preload="metadata">
+                      <source src="/src/assets/Differently Abled/AQN6sgHCBT7NhYsf1j8mGmcS-XFhQyp_pCtMZrmHTs3DqZJ3miLOrAElnG5HVss_7pONgeceNH7V_mzYeu8PGoA1uOdVxEOUwzXAbtqqgrWp7g.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="rounded-2xl overflow-hidden min-h-72 bg-moss-light flex items-end p-8 relative">
-          <img src="/src/assets/meal2.jpg" alt="Welfare outreach" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-moss-light/75"></div>
-          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-3xl font-bold text-moss mb-1">12K+</div><div class="text-mist text-sm">Families supported through welfare programmes annually</div></div>
+
+          <!-- Impact Stats -->
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">12K+</div>
+              <div class="text-sm text-mist mt-1">Families supported annually</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">250K+</div>
+              <div class="text-sm text-mist mt-1">Meals served annually</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">17</div>
+              <div class="text-sm text-mist mt-1">Crisis projects (11 weeks)</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">50+</div>
+              <div class="text-sm text-mist mt-1">Communities reached</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

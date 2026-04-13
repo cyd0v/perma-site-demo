@@ -93,5 +93,149 @@ window.setFreq = setFreq;
 window.setAmt = setAmt;
 window.showContactSection = showContactSection;
 
+function expandPanel(content) {
+  content.dataset.collapsing = 'false';
+  content.classList.remove('hidden');
+  content.classList.add('show');
+  content.style.maxHeight = '0px';
+
+  requestAnimationFrame(() => {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  });
+}
+
+function collapsePanel(content) {
+  if (content.classList.contains('hidden') || !content.classList.contains('show')) return;
+
+  content.dataset.collapsing = 'true';
+  content.style.maxHeight = content.scrollHeight + 'px';
+  content.classList.remove('show');
+
+  requestAnimationFrame(() => {
+    content.style.maxHeight = '0px';
+  });
+
+  const onTransitionEnd = (event) => {
+    if (event.target !== content) return;
+    if (event.propertyName !== 'max-height') return;
+    if (content.dataset.collapsing !== 'true') return;
+
+    content.classList.add('hidden');
+    content.dataset.collapsing = 'false';
+  };
+
+  content.addEventListener('transitionend', onTransitionEnd, { once: true });
+}
+
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  if (!item) return;
+
+  const content = item.querySelector('.accordion-content');
+  const icon = btn.querySelector('.accordion-icon');
+  if (!content || !icon) return;
+  
+  // Close all other accordions
+  document.querySelectorAll('.accordion-item').forEach((accordionItem) => {
+    if (accordionItem !== item) {
+      const otherContent = accordionItem.querySelector('.accordion-content');
+      const otherIcon = accordionItem.querySelector('.accordion-icon');
+      if (!otherContent || !otherIcon) return;
+
+      if (otherContent.classList.contains('show')) {
+        collapsePanel(otherContent);
+        otherIcon.classList.remove('open');
+        const otherBtn = accordionItem.querySelector('.accordion-header');
+        otherBtn?.classList.remove('accordion-open');
+      }
+    }
+  });
+  
+  // Toggle current accordion
+  const isOpen = content.classList.contains('show');
+  if (isOpen) {
+    collapsePanel(content);
+    icon.classList.remove('open');
+    btn.classList.remove('accordion-open');
+    return;
+  }
+
+  expandPanel(content);
+  icon.classList.add('open');
+  btn.classList.add('accordion-open');
+}
+
+function toggleNestedAccordion(btn) {
+  const item = btn.closest('.nested-accordion-item');
+  if (!item) return;
+
+  const content = item.querySelector('.nested-content');
+  const icon = btn.querySelector('.nested-icon') || btn.querySelector('span:last-child');
+  if (!content || !icon) return;
+
+  const isOpen = content.classList.contains('show');
+  if (isOpen) {
+    collapsePanel(content);
+    icon.classList.remove('open');
+    return;
+  }
+
+  expandPanel(content);
+  icon.classList.add('open');
+}
+
+function getCurrentSlideIndex(carousel) {
+  const slides = carousel.querySelectorAll('.carousel-img');
+  return Array.from(slides).findIndex((slide) => slide.classList.contains('active'));
+}
+
+function goToSlide(dotEl, index) {
+  const carousel = dotEl.closest('.carousel-container');
+  const slides = carousel.querySelectorAll('.carousel-img');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  
+  // Hide all slides
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+  
+  // Remove active from all dots
+  dots.forEach((dot) => {
+    dot.classList.remove('active');
+  });
+  
+  // Show selected slide and dot
+  if (slides[index]) {
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+}
+
+function nextSlide(btnEl) {
+  const carousel = btnEl.closest('.carousel-container');
+  const slides = carousel.querySelectorAll('.carousel-img');
+  let current = getCurrentSlideIndex(carousel);
+  let next = (current + 1) % slides.length;
+  
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  goToSlide(dots[next], next);
+}
+
+function prevSlide(btnEl) {
+  const carousel = btnEl.closest('.carousel-container');
+  const slides = carousel.querySelectorAll('.carousel-img');
+  let current = getCurrentSlideIndex(carousel);
+  let prev = (current - 1 + slides.length) % slides.length;
+  
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  goToSlide(dots[prev], prev);
+}
+
+window.toggleAccordion = toggleAccordion;
+window.toggleNestedAccordion = toggleNestedAccordion;
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
+window.goToSlide = goToSlide;
+
 // ── Init on load ───────────────────────────
 document.addEventListener('DOMContentLoaded', initFadeUps);
