@@ -336,31 +336,79 @@
               </button>
               <div class="accordion-content hidden overflow-hidden">
                 <div class="px-6 py-6 bg-cream/30 border-t border-border">
-                  <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Distribution Programme</h4>
-                      <p class="text-mist leading-relaxed mb-4">On Sunday, 28 April 2024, PERMA distributed dry food worth <strong>RM17,000</strong> to <strong>100 underprivileged families</strong> in Dengkil as part of its bi-annual community outreach. PERMA committee members were present to hand over the packed groceries to the families. Lunch was served for all 100 families present.</p>
-                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                        📊 Impact: 100 families | 📅 28 April 2024 | 💰 RM17,000
+                  <div class="space-y-10">
+                    <div class="grid md:grid-cols-2 gap-8">
+                      <div>
+                        <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Aid 2024</h4>
+                        <p class="text-mist leading-relaxed mb-4">PERMA distributed dry food worth <strong>RM17,000</strong> to <strong>100 underprivileged families</strong> in Dengkil as part of its bi-annual community project. PERMA committee members were present to hand over the packed groceries to the families. Lunch was served for all the 100 families present.</p>
+                        <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                          📊 Impact: 100 families | 🍱 Lunch served to all families | 💰 RM17,000
+                        </div>
+                      </div>
+                      <div>
+                        <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                          <div class="carousel-slides">
+                            <img src="/src/assets/Food Aid/food1.jpg" alt="Food distribution" class="carousel-img w-full h-full object-cover active" />
+                            <img src="/src/assets/Food Aid/food2.jpg" alt="Food packages" class="carousel-img w-full h-full object-cover" />
+                            <img src="/src/assets/Food Aid/food3.jpg" alt="Community gathering" class="carousel-img w-full h-full object-cover" />
+                            <img src="/src/assets/Food Aid/food4.jpg" alt="Family receiving aid" class="carousel-img w-full h-full object-cover" />
+                            <img src="/src/assets/Food Aid/food5.jpg" alt="Distribution ceremony" class="carousel-img w-full h-full object-cover" />
+                          </div>
+                          <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                          <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                          <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                            <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                            <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                            <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                            <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                            <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
-                        <div class="carousel-slides">
-                          <img src="/src/assets/Food Aid/food1.jpg" alt="Food distribution" class="carousel-img w-full h-full object-cover active" />
-                          <img src="/src/assets/Food Aid/food2.jpg" alt="Food packages" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Food Aid/food3.jpg" alt="Community gathering" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Food Aid/food4.jpg" alt="Family receiving aid" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Food Aid/food5.jpg" alt="Distribution ceremony" class="carousel-img w-full h-full object-cover" />
+                    <div class="border-t border-border/70 pt-8">
+                      <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="order-2 md:order-1">
+                          <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                            <div class="carousel-slides">
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.24 PM.jpeg" alt="Karunai Illam visit" class="carousel-img w-full h-full object-cover active" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.25 PM.jpeg" alt="Committee members at the home" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.25 PM (1).jpeg" alt="Home mural" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.25 PM (2).jpeg" alt="Awards shelf" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.25 PM (3).jpeg" alt="Committee visit" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.26 PM.jpeg" alt="Committee speaking with resident" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.26 PM (1).jpeg" alt="Children receiving festive ang pows" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.26 PM (2).jpeg" alt="Group visit photo" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.27 PM.jpeg" alt="Lunch service at the home" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.27 PM (1).jpeg" alt="Children having lunch" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.27 PM (2).jpeg" alt="Meal distribution" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Food Aid 2/WhatsApp Image 2026-04-14 at 8.52.27 PM (3).jpeg" alt="Groceries prepared for donation" class="carousel-img w-full h-full object-cover" />
+                            </div>
+                            <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                            <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 flex-wrap justify-center max-w-[80%]">
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 6)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 7)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 8)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 9)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 10)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 11)"></span>
+                            </div>
+                          </div>
                         </div>
-                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
-                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
-                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                        <div class="order-1 md:order-2">
+                          <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Aid 2025</h4>
+                          <p class="text-mist leading-relaxed mb-4">PERMA extended support to Rumah Kebajikan Karunai Illam in Kepong by donating groceries worth <strong>RM1,001.15</strong>, along with a pressure cooker costing <strong>RM229.90</strong>. Lunch was provided for the children at a cost of <strong>RM520</strong> bringing the total expenditure to <strong>RM1,751.05</strong>. Committee members Vick, Mangales, Vimala, Pushpa, Indira, Visahini and Sumithra were present during this visit.</p>
+                          <p class="text-mist leading-relaxed mb-4">The Home houses <strong>20 girls</strong> who attend both Sekolah Kebangsaan and Tamil schools. Committee members also contributed personally by giving the children ang pows, spreading festive cheer and joy.</p>
+                          <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                            🏠 Rumah Kebajikan Karunai Illam | 👧 20 girls supported | 💰 RM1,751.05 total
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -434,7 +482,44 @@
                         Your browser does not support the video tag.
                       </video>
                     </div>
-                    <div class="space-y-2 max-h-[500px] overflow-y-auto pr-1">
+                    <div class="border-t border-border/70 pt-8">
+                      <div class="grid md:grid-cols-2 gap-6 items-start">
+                        <div>
+                          <h5 class="font-serif text-lg font-bold text-moss mb-3">Sri Lanka Flood Relief in collaboration with FOMSO</h5>
+                          <p class="text-mist leading-relaxed mb-4">In response to the devastating floods caused by Cyclone Dithwah which resulted in over 600 deaths and widespread destruction, PERMA contributed <strong>RM5,000</strong> towards FOMSO's humanitarian efforts.</p>
+                          <p class="text-mist leading-relaxed mb-4">FOMSO's team provided aid across several affected regions, including Kandy, Nuwara Eliya, Badulla, Mannar, Mullaitivu, and Vavuniya. Each area was given a budget of <strong>RM8,000</strong>. The FOMSO team that went to Sri Lanka for phase 1 of the relief efforts comprised of Mahen, Dr Geetha, Mr Surena and two other family members.</p>
+                          <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                            🌊 Cyclone Dithwah response | 🤝 In collaboration with FOMSO | 💰 PERMA contribution: RM5,000
+                          </div>
+                        </div>
+                        <div>
+                          <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                            <div class="carousel-slides">
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM.jpeg" alt="Sri Lanka relief groceries" class="carousel-img w-full h-full object-cover active" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (1).jpeg" alt="Relief distribution" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (2).jpeg" alt="Community group photo" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (3).jpeg" alt="Meeting with officials" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (4).jpeg" alt="Relief packs prepared" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (5).jpeg" alt="Aid handover" class="carousel-img w-full h-full object-cover" />
+                              <img src="/src/assets/Sri Lanka Crisis Response/WhatsApp Image 2026-04-14 at 10.05.39 PM (6).jpeg" alt="Document handover" class="carousel-img w-full h-full object-cover" />
+                            </div>
+                            <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                            <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                              <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 6)"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-t border-border/70 pt-8">
+                      <div class="space-y-2 max-h-[500px] overflow-y-auto pr-1">
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>4 Apr 2020:</strong> B40 Families, Ladang Glenmarie &amp; Desa Mentari - Food aid for 136 families (RM13,668)</p></div>
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>11 Apr 2020:</strong> PPE suits distribution - 800 suits for frontline workers (RM5,000)</p></div>
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>15 Apr 2020:</strong> Dengkil rice distribution - 150 families supported (RM3,900)</p></div>
@@ -452,6 +537,7 @@
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>9 Jun 2020:</strong> Heineken grocery support - RM100 credits for 60 families (RM6,000)</p></div>
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>19-24 Jun 2020:</strong> Single mothers cash assistance - RM6,000 distributed across 20 mothers</p></div>
                       <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>21 Jun 2020:</strong> Hygiene kits distribution - RM7,500 raised for 250 kits</p></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -466,39 +552,7 @@
               </button>
               <div class="accordion-content hidden overflow-hidden">
                 <div class="px-6 py-6 bg-cream/30 border-t border-border">
-                  <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Health Screening Programme for Elderly</h4>
-                      <p class="text-mist leading-relaxed mb-4"><strong>National Cancer Society Partnership</strong></p>
-                      <p class="text-mist leading-relaxed mb-4">Mammogram screening for <strong>27 ladies from underprivileged backgrounds</strong> was successfully carried out at the National Cancer Society. Transport was provided to NCS for all participants. Lunch was served for all ladies after the screening was completed. This important programme is carried out <strong>annually</strong> to ensure early detection and prevention.</p>
-                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                        🏥 Health Screening | 👥 27 women | 🚌 Transport Provided
-                      </div>
-                    </div>
-                    <div>
-                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
-                        <div class="carousel-slides">
-                          <img src="/src/assets/Health Screening/health1.jpg" alt="Health screening" class="carousel-img w-full h-full object-cover active" />
-                          <img src="/src/assets/Health Screening/health2.jpg" alt="Screening process" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Health Screening/health3.jpg" alt="Participants" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Health Screening/health4.jpg" alt="Medical check-up" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Health Screening/health5.jpg" alt="Healthcare team" class="carousel-img w-full h-full object-cover" />
-                          <img src="/src/assets/Health Screening/health6.jpg" alt="Group photo" class="carousel-img w-full h-full object-cover" />
-                        </div>
-                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
-                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
-                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
-                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-6 bg-white rounded-lg border border-border/60 p-3">
+                  <div class="bg-white rounded-lg border border-border/60 p-3">
                     <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Differently-Abled Programme Video</p>
                     <video class="w-full rounded-md" controls preload="metadata">
                       <source src="/src/assets/Differently Abled/AQN6sgHCBT7NhYsf1j8mGmcS-XFhQyp_pCtMZrmHTs3DqZJ3miLOrAElnG5HVss_7pONgeceNH7V_mzYeu8PGoA1uOdVxEOUwzXAbtqqgrWp7g.mp4" type="video/mp4" />
@@ -535,22 +589,116 @@
 
     <!-- PILLAR 2 -->
     <div class="bg-cream py-20 px-6 md:px-12 border-b border-border">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
-        <div class="rounded-2xl overflow-hidden min-h-72 bg-ink flex items-end p-8 order-last md:order-first relative">
-          <img src="/src/assets/health.jpg" alt="Health programme activity" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-ink/65"></div>
-          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-2xl font-bold text-gold mb-1">Early detection</div><div class="text-mist text-sm">saves lives — our screenings reach thousands who would otherwise go undiagnosed</div></div>
-        </div>
-        <div>
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="mb-16">
           <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">02</div>
           <div class="eyebrow">Core Pillar Two</div>
           <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Health</em></h2>
-          <p class="text-mist leading-relaxed mt-3 mb-6">PERMA believes prevention is as important as cure. Our health programmes focus on early detection, community education, and mental wellbeing.</p>
-          <div class="flex flex-col gap-3">
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🩺</span><div><h4 class="font-bold text-sm mb-1">Health Screenings</h4><p class="text-mist text-sm leading-relaxed">Free community screenings for chronic conditions including diabetes, hypertension, and cancer.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🧠</span><div><h4 class="font-bold text-sm mb-1">Mental Wellbeing</h4><p class="text-mist text-sm leading-relaxed">Counselling, support groups, and awareness programmes addressing mental health needs.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">📚</span><div><h4 class="font-bold text-sm mb-1">Health Education</h4><p class="text-mist text-sm leading-relaxed">Community workshops on nutrition, hygiene, reproductive health, and disease prevention.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">👶</span><div><h4 class="font-bold text-sm mb-1">Child &amp; Maternal Health</h4><p class="text-mist text-sm leading-relaxed">Support programmes focused on healthy development from early childhood through adolescence.</p></div></div>
+          <p class="text-mist leading-relaxed mt-3 mb-8">PERMA believes prevention is as important as cure. Our health programmes focus on early detection, community education, and mental wellbeing.</p>
+
+          <div class="space-y-4">
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🩺</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Health Screenings</span>
+                    <span class="block text-mist text-sm leading-relaxed">Free community screenings for chronic conditions including diabetes, hypertension, and cancer.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Health Screening Programme</h4>
+                      <p class="text-mist leading-relaxed mb-4"><strong>National Cancer Society Partnership</strong></p>
+                      <p class="text-mist leading-relaxed mb-4">Mammogram screening for <strong>27 ladies from underprivileged backgrounds</strong> was successfully carried out at the National Cancer Society. Transport was provided to NCS for all participants. Lunch was served for all ladies after the screening was completed. This important programme is carried out <strong>annually</strong> to ensure early detection and prevention.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🏥 Health Screening | 👥 27 women | 🚌 Transport Provided
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Health Screening/health1.jpg" alt="Health screening" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Health Screening/health2.jpg" alt="Screening process" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health3.jpg" alt="Participants" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health4.jpg" alt="Medical check-up" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health5.jpg" alt="Healthcare team" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Health Screening/health6.jpg" alt="Group photo" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🧠</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Mental Wellbeing</span>
+                    <span class="block text-mist text-sm leading-relaxed">Counselling, support groups, and awareness programmes addressing mental health needs.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <p class="text-mist leading-relaxed">PERMA supports emotional wellbeing through safe spaces, counselling access, peer support, and community-led awareness initiatives that reduce stigma and encourage early help-seeking.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">📚</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Health Education</span>
+                    <span class="block text-mist text-sm leading-relaxed">Community workshops on nutrition, hygiene, reproductive health, and disease prevention.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <p class="text-mist leading-relaxed">These programmes translate medical knowledge into practical everyday habits, helping families make informed decisions around nutrition, hygiene, prevention, and long-term wellbeing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">👶</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Child &amp; Maternal Health</span>
+                    <span class="block text-mist text-sm leading-relaxed">Support programmes focused on healthy development from early childhood through adolescence.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <p class="text-mist leading-relaxed">PERMA’s maternal and child health work prioritises preventative care, early intervention, and family support so children can grow up healthier and caregivers can access the guidance they need.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
