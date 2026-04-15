@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -330,19 +330,25 @@
           <div class="space-y-3">
             <!-- FOOD AID -->
             <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-                <span class="flex items-center gap-3"><span class="text-2xl">🍱</span><span>Food Aid</span></span>
-                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              <button class="accordion-header accordion-open border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🍱</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Food Aid</span>
+                    <span class="block text-mist text-sm leading-relaxed">Dry food distributions and shared meals for underprivileged families and welfare homes.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon open text-moss transition-transform duration-300">▼</span>
               </button>
-              <div class="accordion-content hidden overflow-hidden">
+              <div class="accordion-content show overflow-hidden">
                 <div class="px-6 py-6 bg-cream/30 border-t border-border">
                   <div class="space-y-10">
                     <div class="grid md:grid-cols-2 gap-8">
                       <div>
                         <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Aid 2024</h4>
-                        <p class="text-mist leading-relaxed mb-4">PERMA distributed dry food worth <strong>RM17,000</strong> to <strong>100 underprivileged families</strong> in Dengkil as part of its bi-annual community project. PERMA committee members were present to hand over the packed groceries to the families. Lunch was served for all the 100 families present.</p>
+                        <p class="text-mist leading-relaxed mb-4">PERMA distributed dry food to <strong>100 underprivileged families</strong> in Dengkil as part of its bi-annual community project. PERMA committee members were present to hand over the packed groceries to the families. Lunch was served for all the 100 families present.</p>
                         <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                          📊 Impact: 100 families | 🍱 Lunch served to all families | 💰 RM17,000
+                          📊 Impact: 100 families | 🍱 Lunch served to all families
                         </div>
                       </div>
                       <div>
@@ -404,10 +410,10 @@
                         </div>
                         <div class="order-1 md:order-2">
                           <h4 class="font-serif text-lg font-bold text-moss mb-3">Food Aid 2025</h4>
-                          <p class="text-mist leading-relaxed mb-4">PERMA extended support to Rumah Kebajikan Karunai Illam in Kepong by donating groceries worth <strong>RM1,001.15</strong>, along with a pressure cooker costing <strong>RM229.90</strong>. Lunch was provided for the children at a cost of <strong>RM520</strong> bringing the total expenditure to <strong>RM1,751.05</strong>. Committee members Vick, Mangales, Vimala, Pushpa, Indira, Visahini and Sumithra were present during this visit.</p>
-                          <p class="text-mist leading-relaxed mb-4">The Home houses <strong>20 girls</strong> who attend both Sekolah Kebangsaan and Tamil schools. Committee members also contributed personally by giving the children ang pows, spreading festive cheer and joy.</p>
+                          <p class="text-mist leading-relaxed mb-4">PERMA supported Rumah Kebajikan Karunai Illam in Kepong, home to <strong>20 girls</strong> from both national and Tamil schools, by providing essential groceries, kitchen equipment, and a shared meal for the children. Committee members also spent time with the girls and shared festive gifts, bringing additional joy and encouragement.</p>
+                          <p class="text-mist leading-relaxed mb-4">This initiative helped improve daily living conditions while ensuring better access to nutritious meals. More importantly, it created a warm and caring environment that uplifted the children's spirits and reinforced a sense of support and belonging.</p>
                           <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                            🏠 Rumah Kebajikan Karunai Illam | 👧 20 girls supported | 💰 RM1,751.05 total
+                            🏠 Rumah Kebajikan Karunai Illam | 👧 20 girls supported
                           </div>
                         </div>
                       </div>
@@ -419,8 +425,14 @@
 
             <!-- FINANCIAL ASSISTANCE -->
             <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-                <span class="flex items-center gap-3"><span class="text-2xl">💰</span><span>Financial Assistance</span></span>
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">💰</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Financial Assistance</span>
+                    <span class="block text-mist text-sm leading-relaxed">Equipment and resource support for orphanages and welfare homes in need.</span>
+                  </span>
+                </span>
                 <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
               </button>
               <div class="accordion-content hidden overflow-hidden">
@@ -428,10 +440,10 @@
                   <div class="grid md:grid-cols-2 gap-8">
                     <div>
                       <h4 class="font-serif text-lg font-bold text-moss mb-3">Essential Equipment for Mary Orphanage</h4>
-                      <p class="text-mist leading-relaxed mb-4">The Mary Orphanage, a well-run shelter for around 50 boys and girls, requested a replacement vegetable chiller. PERMA purchased a new 2-door chiller at a cost of <strong>RM2,450</strong>, delivered on 19 January 2024. A donor also kindly donated a rice cooker and blender. Committee members attended the handover ceremony.</p>
-                      <p class="text-mist leading-relaxed mb-4">Additionally, our Welfare Chairperson, Ms Vimala, secured a generous donor who contributed <strong>RM1,014</strong> to cover dry provisions requested by the orphanage.</p>
+                      <p class="text-mist leading-relaxed mb-4">The Mary Orphanage, a well-run shelter for around 50 boys and girls, requested a replacement vegetable chiller. PERMA purchased a new 2-door chiller, delivered on 19 January 2024. A donor also kindly donated a rice cooker and blender. Committee members attended the handover ceremony.</p>
+                      <p class="text-mist leading-relaxed mb-4">Additionally, our Welfare Chairperson, Ms Vimala, secured a generous donor to cover dry provisions requested by the orphanage.</p>
                       <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                        🏪 Equipment: Chiller System | 📅 19 January 2024 | 💰 RM3,464 total
+                        🏪 Equipment: Chiller System | 📅 19 January 2024
                       </div>
                     </div>
                     <div>
@@ -465,8 +477,14 @@
 
             <!-- CRISIS RESPONSE -->
             <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-                <span class="flex items-center gap-3"><span class="text-2xl">🏠</span><span>Crisis Response</span></span>
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🏠</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Crisis Response</span>
+                    <span class="block text-mist text-sm leading-relaxed">Emergency relief during COVID-19 MCO and international disaster response efforts.</span>
+                  </span>
+                </span>
                 <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
               </button>
               <div class="accordion-content hidden overflow-hidden">
@@ -475,21 +493,14 @@
                   <p class="text-mist leading-relaxed mb-6">During the COVID-19 MCO period, PERMA successfully completed <strong>17 comprehensive projects within just 11 weeks</strong> to support families severely affected by the crisis. These initiatives provided timely assistance and relief, demonstrating PERMA's swift response and strong commitment to helping communities in times of crisis.</p>
                   
                   <div class="space-y-4">
-                    <div class="bg-white rounded-lg border border-border/60 p-3">
-                      <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Crisis Response Video</p>
-                      <video class="w-full rounded-md" controls preload="metadata">
-                        <source src="/src/assets/Crisis Response/Crisis Response.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
                     <div class="border-t border-border/70 pt-8">
                       <div class="grid md:grid-cols-2 gap-6 items-start">
                         <div>
                           <h5 class="font-serif text-lg font-bold text-moss mb-3">Sri Lanka Flood Relief in collaboration with FOMSO</h5>
-                          <p class="text-mist leading-relaxed mb-4">In response to the devastating floods caused by Cyclone Dithwah which resulted in over 600 deaths and widespread destruction, PERMA contributed <strong>RM5,000</strong> towards FOMSO's humanitarian efforts.</p>
-                          <p class="text-mist leading-relaxed mb-4">FOMSO's team provided aid across several affected regions, including Kandy, Nuwara Eliya, Badulla, Mannar, Mullaitivu, and Vavuniya. Each area was given a budget of <strong>RM8,000</strong>. The FOMSO team that went to Sri Lanka for phase 1 of the relief efforts comprised of Mahen, Dr Geetha, Mr Surena and two other family members.</p>
+                          <p class="text-mist leading-relaxed mb-4">In response to the devastating floods caused by Cyclone Dithwah which resulted in over 600 deaths and widespread destruction, PERMA contributed towards FOMSO's humanitarian efforts.</p>
+                          <p class="text-mist leading-relaxed mb-4">FOMSO's team provided aid across several affected regions, including Kandy, Nuwara Eliya, Badulla, Mannar, Mullaitivu, and Vavuniya. The FOMSO team that went to Sri Lanka for phase 1 of the relief efforts comprised of Mahen, Dr Geetha, Mr Surena and two other family members.</p>
                           <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                            🌊 Cyclone Dithwah response | 🤝 In collaboration with FOMSO | 💰 PERMA contribution: RM5,000
+                            🌊 Cyclone Dithwah response | 🤝 In collaboration with FOMSO
                           </div>
                         </div>
                         <div>
@@ -519,24 +530,53 @@
                       </div>
                     </div>
                     <div class="border-t border-border/70 pt-8">
-                      <div class="space-y-2 max-h-[500px] overflow-y-auto pr-1">
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>4 Apr 2020:</strong> B40 Families, Ladang Glenmarie &amp; Desa Mentari - Food aid for 136 families (RM13,668)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>11 Apr 2020:</strong> PPE suits distribution - 800 suits for frontline workers (RM5,000)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>15 Apr 2020:</strong> Dengkil rice distribution - 150 families supported (RM3,900)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>18 Apr 2020:</strong> Sri Sentosa low-cost flats - Food aid for 100 families (RM7,040)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>24 Apr 2020:</strong> Stray dogs feeding - Food for 80 stray dogs (RM1,676.50)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>24 Apr 2020:</strong> Kechara Soup Kitchen - Food aid for 100 families (RM2,645)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>28 Apr 2020:</strong> Pertiwi Soup Kitchen partnership - 1,000 meals sponsored with BAC (RM2,500)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>30 Apr 2020:</strong> Orang Asli settlements - 133 families reached across 6 settlements (RM5,003.80)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>9 May 2020:</strong> Refugee family support - Aid for 100 families in 6 locations (RM7,991)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>10 May 2020:</strong> Repatriation assistance - Partial flight support for Sri Lankan returnee (RM696)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>21 May 2020:</strong> Paya Jaras &amp; Kota Damansara - Food aid and masks for 100 B40 families (RM8,002)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>22 May 2020:</strong> Single mothers &amp; DV survivors - Aid and masks for 100 women (RM10,110)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>27 May 2020:</strong> Old folk's home support - Washing machine donation and lunch for 35 residents (RM1,450)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>6 Jun 2020:</strong> Makepeace Lodge initiative - Food aid for 47 families (RM4,722)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>9 Jun 2020:</strong> Heineken grocery support - RM100 credits for 60 families (RM6,000)</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>19-24 Jun 2020:</strong> Single mothers cash assistance - RM6,000 distributed across 20 mothers</p></div>
-                      <div class="bg-white rounded border border-border/50 px-4 py-3 text-sm text-ink flex items-start gap-3"><span class="w-2.5 h-2.5 rounded-full bg-terra mt-1.5 flex-shrink-0"></span><p><strong>21 Jun 2020:</strong> Hygiene kits distribution - RM7,500 raised for 250 kits</p></div>
+                      <div class="grid md:grid-cols-2 gap-4">
+
+                        <!-- Food Aid -->
+                        <div class="bg-white rounded-lg border border-border/60 p-4">
+                          <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-3">🍚 Food Aid</p>
+                          <ul class="space-y-2 text-sm text-ink">
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>B40 Families, Ladang Glenmarie &amp; Desa Mentari — Food aid for 136 families</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Dengkil rice distribution — 150 families supported</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Sri Sentosa low-cost flats — Food aid for 100 families</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Kechara Soup Kitchen — Food aid for 100 families</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Pertiwi Soup Kitchen — 1,000 meals sponsored with BAC</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Orang Asli settlements — 133 families reached across 6 settlements</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Paya Jaras &amp; Kota Damansara — Food aid for 100 B40 families</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Makepeace Lodge — Food aid for 47 families</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Heineken grocery support — Grocery credits for 60 families</li>
+                          </ul>
+                        </div>
+
+                        <!-- PPE & Hygiene -->
+                        <div class="bg-white rounded-lg border border-border/60 p-4">
+                          <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-3">🧤 PPE &amp; Hygiene</p>
+                          <ul class="space-y-2 text-sm text-ink">
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>PPE suits distribution — 800 suits for frontline workers</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Hygiene kits distribution — 250 kits distributed</li>
+                          </ul>
+                        </div>
+
+                        <!-- Community Aid -->
+                        <div class="bg-white rounded-lg border border-border/60 p-4">
+                          <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-3">🤝 Community Aid &amp; Support</p>
+                          <ul class="space-y-2 text-sm text-ink">
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Refugee family support — Aid for 100 families in 6 locations</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Single mothers &amp; DV survivors — Aid and masks for 100 women</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Single mothers cash assistance — Distributed to 20 mothers</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Old folk's home — Washing machine donation and lunch for 35 residents</li>
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Repatriation assistance — Flight support for Sri Lankan returnee</li>
+                          </ul>
+                        </div>
+
+                        <!-- Other -->
+                        <div class="bg-white rounded-lg border border-border/60 p-4">
+                          <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-3">🐾 Other Initiatives</p>
+                          <ul class="space-y-2 text-sm text-ink">
+                            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terra mt-2 flex-shrink-0"></span>Stray dogs feeding — Food for 80 stray dogs</li>
+                          </ul>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -546,8 +586,14 @@
 
             <!-- ELDERLY & DIFFERENTLY-ABLED -->
             <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left font-semibold text-ink hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-                <span class="flex items-center gap-3"><span class="text-2xl">👴</span><span>Elderly & Differently-Abled Care</span></span>
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">👴</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Elderly &amp; Differently-Abled Care</span>
+                    <span class="block text-mist text-sm leading-relaxed">Dedicated support and enrichment programmes for senior citizens and individuals with disabilities.</span>
+                  </span>
+                </span>
                 <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
               </button>
               <div class="accordion-content hidden overflow-hidden">
@@ -598,7 +644,7 @@
 
           <div class="space-y-4">
             <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <button class="accordion-header accordion-open border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
                 <span class="flex items-start gap-4 pr-4">
                   <span class="text-2xl flex-shrink-0">🩺</span>
                   <span>
@@ -606,17 +652,19 @@
                     <span class="block text-mist text-sm leading-relaxed">Free community screenings for chronic conditions including diabetes, hypertension, and cancer.</span>
                   </span>
                 </span>
-                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+                <span class="accordion-icon open text-moss transition-transform duration-300">▼</span>
               </button>
-              <div class="accordion-content hidden overflow-hidden">
+              <div class="accordion-content show overflow-hidden">
                 <div class="px-6 py-6 bg-cream/30 border-t border-border">
                   <div class="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Health Screening Programme</h4>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Mammogram Screening Programme</h4>
                       <p class="text-mist leading-relaxed mb-4"><strong>National Cancer Society Partnership</strong></p>
-                      <p class="text-mist leading-relaxed mb-4">Mammogram screening for <strong>27 ladies from underprivileged backgrounds</strong> was successfully carried out at the National Cancer Society. Transport was provided to NCS for all participants. Lunch was served for all ladies after the screening was completed. This important programme is carried out <strong>annually</strong> to ensure early detection and prevention.</p>
+                      <p class="text-mist leading-relaxed mb-4">PERMA organised its annual mammogram screening programme in collaboration with the National Cancer Society, supporting <strong>27 women from underprivileged backgrounds</strong> by providing access to essential screenings.</p>
+                      <p class="text-mist leading-relaxed mb-4">This initiative promotes early detection of breast cancer, helping improve health outcomes while removing barriers such as cost and accessibility. It also raises awareness on the importance of regular check-ups and encourages women to take a more proactive approach to their health.</p>
+                      <p class="text-mist leading-relaxed mb-4">Overall, the programme empowers women with greater confidence and access to care, making a meaningful impact in underserved communities.</p>
                       <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
-                        🏥 Health Screening | 👥 27 women | 🚌 Transport Provided
+                        🏥 Annual Programme | 👥 27 women | 🤝 National Cancer Society
                       </div>
                     </div>
                     <div>
@@ -659,7 +707,35 @@
               </button>
               <div class="accordion-content hidden overflow-hidden">
                 <div class="px-6 py-6 bg-cream/30 border-t border-border">
-                  <p class="text-mist leading-relaxed">PERMA supports emotional wellbeing through safe spaces, counselling access, peer support, and community-led awareness initiatives that reduce stigma and encourage early help-seeking.</p>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-3">Suara Minda — Pottery for Mental Wellness</h4>
+                      <p class="text-mist leading-relaxed mb-4">Suara Minda (SM), supported by the Malaysian Mental Health Association and Selangor Mental Health Association, provides a supportive space for individuals on their mental health recovery journey.</p>
+                      <p class="text-mist leading-relaxed mb-4">Through pottery workshops, participants benefit from a calming and mindful activity that enhances focus, emotional expression and overall well-being. PERMA's support in providing organic clay for these sessions over a 6-month period enables these sessions to be carried out consistently, ensuring continuous engagement.</p>
+                      <p class="text-mist leading-relaxed mb-4">The initiative has a meaningful impact by building confidence, reducing stress and fostering a sense of purpose — helping individuals feel more empowered and supported in their road to recovery.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🏺 Pottery Workshops | 🤝 MMHA & SMHA | 📅 6-Month Support
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Mental Wellbeing/WhatsApp Image 2026-04-15 at 5.38.54 PM.jpeg" alt="Pottery workshop session" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Mental Wellbeing/WhatsApp Image 2026-04-15 at 5.38.55 PM.jpeg" alt="Participants making clay pieces" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Mental Wellbeing/WhatsApp Image 2026-04-15 at 5.38.55 PM (1).jpeg" alt="Clay creations on display" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Mental Wellbeing/WhatsApp Image 2026-04-15 at 5.38.55 PM (2).jpeg" alt="Community and mentors at workshop" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -682,22 +758,25 @@
               </div>
             </div>
 
-            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all bg-white">
-              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-                <span class="flex items-start gap-4 pr-4">
-                  <span class="text-2xl flex-shrink-0">👶</span>
-                  <span>
-                    <span class="block font-bold text-sm mb-1 text-ink">Child &amp; Maternal Health</span>
-                    <span class="block text-mist text-sm leading-relaxed">Support programmes focused on healthy development from early childhood through adolescence.</span>
-                  </span>
-                </span>
-                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
-              </button>
-              <div class="accordion-content hidden overflow-hidden">
-                <div class="px-6 py-6 bg-cream/30 border-t border-border">
-                  <p class="text-mist leading-relaxed">PERMA’s maternal and child health work prioritises preventative care, early intervention, and family support so children can grow up healthier and caregivers can access the guidance they need.</p>
-                </div>
-              </div>
+          </div>
+
+          <!-- Health Impact Stats -->
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">27</div>
+              <div class="text-sm text-mist mt-1">Women screened annually</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">6</div>
+              <div class="text-sm text-mist mt-1">Months of pottery therapy support</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">3</div>
+              <div class="text-sm text-mist mt-1">Active health programmes</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">2</div>
+              <div class="text-sm text-mist mt-1">Partner health organisations</div>
             </div>
           </div>
         </div>
@@ -705,24 +784,194 @@
     </div>
 
     <!-- PILLAR 3 -->
-    <div class="bg-white py-20 px-6 md:px-12">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-up">
-        <div>
+    <div class="bg-white py-20 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="mb-16">
           <div class="font-serif text-8xl font-bold text-moss/10 leading-none mb-[-1rem]">03</div>
           <div class="eyebrow">Core Pillar Three</div>
           <h2 class="font-serif text-4xl font-bold"><em class="text-moss not-italic">Capacity Building</em></h2>
-          <p class="text-mist leading-relaxed mt-3 mb-6">Lasting change requires more than immediate relief. PERMA invests in education, skills, sports, and the arts — creating pathways beyond hardship.</p>
-          <div class="flex flex-col gap-3">
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🎓</span><div><h4 class="font-bold text-sm mb-1">Education Support</h4><p class="text-mist text-sm leading-relaxed">Scholarships, tutoring, and school supply programmes that keep children in education.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🛠️</span><div><h4 class="font-bold text-sm mb-1">Vocational Skills Training</h4><p class="text-mist text-sm leading-relaxed">Practical skills in trades, technology, and entrepreneurship that open doors to sustainable livelihoods.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">⚽</span><div><h4 class="font-bold text-sm mb-1">Sports Programmes</h4><p class="text-mist text-sm leading-relaxed">Community sports initiatives that build discipline, teamwork, and confidence in young people.</p></div></div>
-            <div class="prog-item"><span class="text-2xl flex-shrink-0">🎨</span><div><h4 class="font-bold text-sm mb-1">Arts &amp; Culture</h4><p class="text-mist text-sm leading-relaxed">Creative programmes that foster expression, identity, and community pride — especially for youth.</p></div></div>
+          <p class="text-mist leading-relaxed mt-3 mb-8">Lasting change requires more than immediate relief. PERMA invests in education, skills, sports, and the arts — creating pathways beyond hardship.</p>
+
+          <div class="space-y-4">
+
+            <!-- EDUCATION -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header accordion-open border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🎓</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Education Support</span>
+                    <span class="block text-mist text-sm leading-relaxed">Back-to-school initiatives providing books and educational materials to Tamil school students.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon open text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content show overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-1">Back-to-School Project</h4>
+                      <p class="text-mist text-sm mb-3">20 February 2025 · SJKT Ladang Kerling</p>
+                      <p class="text-mist leading-relaxed mb-4">PERMA visited SJKT Ladang Kerling where we were warmly welcomed by the Headmaster, Mr. Kalayvanan, Cikgu Sajim, the Penolong Kanan, and several other teachers. It was heartwarming to see the school maintained in excellent condition with <strong>70 students</strong> currently enrolled, ranging from preschool to Standard 6.</p>
+                      <p class="text-mist leading-relaxed mb-4">Various activity books, exercise books, and other educational materials were distributed to the students. As a gesture of appreciation, the school presented a token of thanks to PERMA.</p>
+                      <p class="text-mist leading-relaxed mb-4">This effort has helped enhance classroom engagement, boost students' confidence and encourage a more positive approach to learning. By easing resource constraints, the project also supports teachers in delivering more effective lessons and ensures that every student has the tools needed to succeed.</p>
+                      <p class="text-mist leading-relaxed mb-4">Overall the initiative strengthens the school's ability to provide quality education while fostering motivation and a more inclusive learning experience.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🏫 SJKT Ladang Kerling | 👧 70 students | 📅 Feb 2025
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.47 PM.jpeg" alt="School welcome banner" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.47 PM (1).jpeg" alt="School resource centre" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.48 PM.jpeg" alt="PERMA committee with school staff" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.48 PM (1).jpeg" alt="Students receiving books" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.48 PM (2).jpeg" alt="Students gathered at school" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.49 PM.jpeg" alt="Book distribution" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.49 PM (1).jpeg" alt="Group photo with students" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Education/WhatsApp Image 2026-04-15 at 6.07.49 PM (2).jpeg" alt="Students with educational materials" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 flex-wrap justify-center max-w-[80%]">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 6)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 7)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- VOCATIONAL SKILLS -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🛠️</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Vocational Skills Training</span>
+                    <span class="block text-mist text-sm leading-relaxed">Mentorship, karate training, and life skills development for VTOC students.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-serif text-lg font-bold text-moss mb-1">Mentorship & Life Skills Programme at VTOC</h4>
+                      <p class="text-mist text-sm mb-3">2025</p>
+                      <p class="text-mist leading-relaxed mb-4">PERMA supports <strong>31 VTOC students</strong> — primarily Indian and Orang Asli girls — through a holistic programme designed to build confidence, independence, and life skills. Through consistent monthly support, students are able to focus more fully on their vocational training without the added burden of financial stress, improving attendance, motivation and overall well-being.</p>
+                      <p class="text-mist leading-relaxed mb-4">To further strengthen personal development, PERMA introduced <strong>Karate classes</strong>, giving students the opportunity to learn self-defence while cultivating discipline, resilience, and self-confidence.</p>
+                      <p class="text-mist leading-relaxed mb-4">A highlight of the year was the orientation session held on <strong>23 August 2025</strong>, led by Dr. Priya, with an energising Zumba session by Pushpa. PERMA's president, Ms. Indira, along with committee members Vimala, Pushpa and Mangales, reinforced a strong sense of community and support.</p>
+                      <p class="text-mist leading-relaxed mb-4">A key milestone was the launch of PERMA's <strong>personalised mentorship programme</strong>, pairing committee members with students to provide guidance, outings, and ongoing support — ensuring each student has a trusted mentor as they navigate personal and educational challenges.</p>
+                      <p class="text-mist leading-relaxed mb-4">Overall, the programme has created a nurturing environment where students feel supported, confident, and motivated to pursue their goals, equipping them with the skills and mindset needed for a brighter future.</p>
+                      <div class="text-sm bg-moss/10 p-3 rounded-lg text-moss font-medium">
+                        🎓 31 students | 🥋 Karate Training | 🤝 Personalised Mentorship
+                      </div>
+                    </div>
+                    <div>
+                      <div class="carousel-container relative rounded-lg overflow-hidden h-64 md:h-80 bg-gray-200">
+                        <div class="carousel-slides">
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.31 PM.jpeg" alt="VTOC orientation session" class="carousel-img w-full h-full object-cover active" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.31 PM (1).jpeg" alt="Students at orientation" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.32 PM.jpeg" alt="PERMA committee with students" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.32 PM (1).jpeg" alt="Group activity" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.32 PM (2).jpeg" alt="Mentorship session" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.33 PM.jpeg" alt="Skills training" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.33 PM (1).jpeg" alt="Student activities" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.33 PM (2).jpeg" alt="Community gathering" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.33 PM (3).jpeg" alt="Programme activities" class="carousel-img w-full h-full object-cover" />
+                          <img src="/src/assets/Capacity Building Vocational Skills Training/WhatsApp Image 2026-04-15 at 7.19.34 PM.jpeg" alt="VTOC students" class="carousel-img w-full h-full object-cover" />
+                        </div>
+                        <button class="carousel-btn carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="prevSlide(this)">‹</button>
+                        <button class="carousel-btn carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-all" onclick="nextSlide(this)">›</button>
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 flex-wrap justify-center max-w-[80%]">
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/80 cursor-pointer active" onclick="goToSlide(this, 0)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 1)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 2)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 3)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 4)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 5)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 6)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 7)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 8)"></span>
+                          <span class="carousel-dot w-2 h-2 rounded-full bg-white/30 cursor-pointer" onclick="goToSlide(this, 9)"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SPORTS -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">⚽</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Sports Programmes</span>
+                    <span class="block text-mist text-sm leading-relaxed">Community sports initiatives that build discipline, teamwork, and confidence in young people.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <p class="text-mist leading-relaxed">Community sports initiatives that build discipline, teamwork, and confidence in young people.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ARTS & CULTURE -->
+            <div class="accordion-item border border-border rounded-lg overflow-hidden transition-all">
+              <button class="accordion-header border-border rounded-lg w-full px-6 py-4 text-left hover:bg-moss/5 transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+                <span class="flex items-start gap-4 pr-4">
+                  <span class="text-2xl flex-shrink-0">🎨</span>
+                  <span>
+                    <span class="block font-bold text-sm mb-1 text-ink">Arts &amp; Culture</span>
+                    <span class="block text-mist text-sm leading-relaxed">Creative programmes that foster expression, identity, and community pride — especially for youth.</span>
+                  </span>
+                </span>
+                <span class="accordion-icon text-moss transition-transform duration-300">▼</span>
+              </button>
+              <div class="accordion-content hidden overflow-hidden">
+                <div class="px-6 py-6 bg-cream/30 border-t border-border">
+                  <p class="text-mist leading-relaxed">Creative programmes that foster expression, identity, and community pride — especially for youth.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
-        <div class="rounded-2xl overflow-hidden min-h-72 bg-gold-pale flex items-end p-8 relative">
-          <img src="/src/assets/education.jpg" alt="Capacity building programme" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gold-pale/80"></div>
-          <div class="relative bg-white rounded-xl p-6 shadow-lg"><div class="font-serif text-2xl font-bold text-terra mb-1">Long-term</div><div class="text-mist text-sm">Our capacity building programmes create change that outlasts any single act of assistance</div></div>
+
+          <!-- Capacity Building Impact Stats -->
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">101+</div>
+              <div class="text-sm text-mist mt-1">Students supported</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">2</div>
+              <div class="text-sm text-mist mt-1">Partner institutions</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">31</div>
+              <div class="text-sm text-mist mt-1">Mentored VTOC students</div>
+            </div>
+            <div class="bg-moss/10 p-4 rounded-lg text-center">
+              <div class="font-serif text-3xl font-bold text-moss">4</div>
+              <div class="text-sm text-mist mt-1">Programme streams</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
