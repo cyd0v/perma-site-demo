@@ -2,6 +2,9 @@
 // PERMA — main.js
 // ═══════════════════════════════════════════
 
+// Prevent browser from restoring scroll position on refresh
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 // ── Page switching ─────────────────────────
 function showPage(name) {
   document.querySelectorAll('.page').forEach((page) => page.classList.remove('active'));
