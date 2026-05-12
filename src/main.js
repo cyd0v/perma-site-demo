@@ -254,6 +254,7 @@ function prevSlide(btnEl) {
 }
 
 const newsletterViewers = {};
+const NEWSLETTER_SCALE_FACTOR = 0.82;
 
 function updateNewsletterControls(viewerId) {
   const viewer = newsletterViewers[viewerId];
@@ -279,7 +280,7 @@ async function renderNewsletterPage(viewerId) {
   const cssWidth = Math.max(680, Math.floor(viewer.viewport.clientWidth - 24));
   const baseViewport = page.getViewport({ scale: 1 });
   if (!viewer.lockedScale) {
-    const fitScale = cssWidth / baseViewport.width;
+    const fitScale = (cssWidth / baseViewport.width) * NEWSLETTER_SCALE_FACTOR;
     viewer.lockedScale = Math.max(0.1, Math.min(2, fitScale));
   }
 
