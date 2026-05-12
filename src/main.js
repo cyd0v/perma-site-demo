@@ -3,12 +3,18 @@
 // ═══════════════════════════════════════════
 
 let pdfjsLibPromise = null;
+let pdfWorkerInstance = null;
 
 async function loadPdfJs() {
   if (!pdfjsLibPromise) {
     pdfjsLibPromise = import('pdfjs-dist/build/pdf.mjs').then((mod) => {
-      // Keep PDF rendering workerless for static hosting compatibility.
-      mod.GlobalWorkerOptions.workerSrc = '';
+      if (!pdfWorkerInstance) {
+        pdfWorkerInstance = new Worker(
+          new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url),
+          { type: 'module' }
+        );
+      }
+      mod.GlobalWorkerOptions.workerPort = pdfWorkerInstance;
       return mod;
     });
   }
@@ -326,7 +332,7 @@ async function initNewsletterViewer(viewerId) {
 
   try {
     const pdfjsLib = await loadPdfJs();
-    const loadingTask = pdfjsLib.getDocument({ url: src, disableWorker: true });
+    const loadingTask = pdfjsLib.getDocument(src);
     const pdfDoc = await loadingTask.promise;
 
     newsletterViewers[viewerId] = {
