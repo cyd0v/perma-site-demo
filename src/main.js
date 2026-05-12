@@ -1,5 +1,3 @@
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
-
 // ═══════════════════════════════════════════
 // PERMA — main.js
 // ═══════════════════════════════════════════
@@ -9,7 +7,8 @@ let pdfjsLibPromise = null;
 async function loadPdfJs() {
   if (!pdfjsLibPromise) {
     pdfjsLibPromise = import('pdfjs-dist/build/pdf.mjs').then((mod) => {
-      mod.GlobalWorkerOptions.workerSrc = pdfWorker;
+      // Keep PDF rendering workerless for static hosting compatibility.
+      mod.GlobalWorkerOptions.workerSrc = '';
       return mod;
     });
   }
@@ -327,7 +326,7 @@ async function initNewsletterViewer(viewerId) {
 
   try {
     const pdfjsLib = await loadPdfJs();
-    const loadingTask = pdfjsLib.getDocument(src);
+    const loadingTask = pdfjsLib.getDocument({ url: src, disableWorker: true });
     const pdfDoc = await loadingTask.promise;
 
     newsletterViewers[viewerId] = {
