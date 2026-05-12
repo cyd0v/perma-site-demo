@@ -1,6 +1,20 @@
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
 // ═══════════════════════════════════════════
 // PERMA — main.js
 // ═══════════════════════════════════════════
+
+let pdfjsLibPromise = null;
+
+async function loadPdfJs() {
+  if (!pdfjsLibPromise) {
+    pdfjsLibPromise = import('pdfjs-dist/build/pdf.mjs').then((mod) => {
+      mod.GlobalWorkerOptions.workerSrc = pdfWorker;
+      return mod;
+    });
+  }
+  return pdfjsLibPromise;
+}
 
 // Prevent browser from restoring scroll position on refresh
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -234,11 +248,140 @@ function prevSlide(btnEl) {
   goToSlide(dots[prev], prev);
 }
 
+const newsletterViewers = {};
+
+function updateNewsletterControls(viewerId) {
+  const viewer = newsletterViewers[viewerId];
+  if (!viewer) return;
+
+  const prevBtn = document.getElementById(`${viewerId}-prev`);
+  const nextBtn = document.getElementById(`${viewerId}-next`);
+  const pageLabel = document.getElementById(`${viewerId}-page-label`);
+
+  if (prevBtn) prevBtn.disabled = viewer.page <= 1;
+  if (nextBtn) nextBtn.disabled = viewer.page >= viewer.totalPages;
+  if (pageLabel) pageLabel.textContent = `Page ${viewer.page} / ${viewer.totalPages}`;
+}
+
+async function renderNewsletterPage(viewerId) {
+  const viewer = newsletterViewers[viewerId];
+  if (!viewer?.pdfDoc) return;
+
+  const status = document.getElementById(`${viewerId}-status`);
+  if (status) status.textContent = `Rendering page ${viewer.page}...`;
+
+  const page = await viewer.pdfDoc.getPage(viewer.page);
+  const cssWidth = Math.max(680, Math.floor(viewer.viewport.clientWidth - 24));
+  const baseViewport = page.getViewport({ scale: 1 });
+  if (!viewer.lockedScale) {
+    const fitScale = cssWidth / baseViewport.width;
+    viewer.lockedScale = Math.max(0.1, Math.min(2, fitScale));
+  }
+
+  const renderScale = viewer.lockedScale;
+  const viewport = page.getViewport({ scale: renderScale });
+
+  const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+  viewer.canvas.width = Math.floor(viewport.width * dpr);
+  viewer.canvas.height = Math.floor(viewport.height * dpr);
+  viewer.canvas.style.width = `${Math.floor(viewport.width)}px`;
+  viewer.canvas.style.maxWidth = '100%';
+  viewer.canvas.style.height = 'auto';
+
+  viewer.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  viewer.ctx.clearRect(0, 0, viewport.width, viewport.height);
+
+  if (viewer.renderTask) {
+    try {
+      viewer.renderTask.cancel();
+    } catch {
+      // Ignore cancel errors when no task is active.
+    }
+  }
+
+  viewer.renderTask = page.render({
+    canvasContext: viewer.ctx,
+    viewport,
+  });
+
+  try {
+    await viewer.renderTask.promise;
+    if (status) status.textContent = 'Use Previous/Next to navigate pages.';
+  } catch {
+    if (status) status.textContent = 'Unable to render this page. Try again.';
+  }
+
+  updateNewsletterControls(viewerId);
+}
+
+async function initNewsletterViewer(viewerId) {
+  const root = document.getElementById(viewerId);
+  const canvas = document.getElementById(`${viewerId}-canvas`);
+  if (!root || !canvas) return;
+
+  const src = root.dataset.pdfSrc;
+  if (!src) return;
+
+  const status = document.getElementById(`${viewerId}-status`);
+  if (status) status.textContent = 'Loading PDF...';
+
+  try {
+    const pdfjsLib = await loadPdfJs();
+    const loadingTask = pdfjsLib.getDocument(src);
+    const pdfDoc = await loadingTask.promise;
+
+    newsletterViewers[viewerId] = {
+      pdfDoc,
+      page: 1,
+      totalPages: pdfDoc.numPages,
+      lockedScale: null,
+      viewport: document.getElementById(`${viewerId}-viewport`),
+      canvas,
+      ctx: canvas.getContext('2d', { alpha: false }),
+      renderTask: null,
+    };
+
+    await renderNewsletterPage(viewerId);
+  } catch {
+    if (status) status.textContent = 'Unable to load PDF in-page. Use Open PDF instead.';
+  }
+}
+
+function initNewsletterViewers() {
+  initNewsletterViewer('newsletter-2026');
+  initNewsletterViewer('newsletter-2025');
+}
+
+function changePdfPage(viewerId, delta) {
+  const viewer = newsletterViewers[viewerId];
+  if (!viewer) return;
+
+  const next = Math.min(viewer.totalPages, Math.max(1, viewer.page + delta));
+  if (next === viewer.page) return;
+
+  viewer.page = next;
+  renderNewsletterPage(viewerId);
+}
+
+function rerenderNewsletterViewers() {
+  Object.keys(newsletterViewers).forEach((viewerId) => {
+    renderNewsletterPage(viewerId);
+  });
+}
+
 window.toggleAccordion = toggleAccordion;
 window.toggleNestedAccordion = toggleNestedAccordion;
 window.nextSlide = nextSlide;
 window.prevSlide = prevSlide;
 window.goToSlide = goToSlide;
+window.changePdfPage = changePdfPage;
+
+window.addEventListener('resize', () => {
+  rerenderNewsletterViewers();
+});
 
 // ── Init on load ───────────────────────────
-document.addEventListener('DOMContentLoaded', initFadeUps);
+document.addEventListener('DOMContentLoaded', () => {
+  initFadeUps();
+  initNewsletterViewers();
+});

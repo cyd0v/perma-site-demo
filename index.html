@@ -45,6 +45,7 @@
       <li><a href="#" class="nav-link active" onclick="showPage('home');return false">Home</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('about');return false">About</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('work');return false">Our Work</a></li>
+      <li><a href="#" class="nav-link" onclick="showPage('newsletter');return false">Newsletter</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('getinvolved');return false">Get Involved</a></li>
       <li><a href="#" class="nav-link nav-donate" onclick="showPage('donate');return false">Donate</a></li>
     </ul>
@@ -62,6 +63,7 @@
     <a href="#" class="mob-link" onclick="showPage('home');toggleMenu();return false">Home</a>
     <a href="#" class="mob-link" onclick="showPage('about');toggleMenu();return false">About</a>
     <a href="#" class="mob-link" onclick="showPage('work');toggleMenu();return false">Our Work</a>
+    <a href="#" class="mob-link" onclick="showPage('newsletter');toggleMenu();return false">Newsletter</a>
     <a href="#" class="mob-link" onclick="showPage('getinvolved');toggleMenu();return false">Get Involved</a>
     <a href="#" class="mob-link mob-donate" onclick="showPage('donate');toggleMenu();return false">Donate Now →</a>
   </div>
@@ -1763,6 +1765,113 @@
       </div>
     </footer>
   </div><!-- /page-work -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: NEWSLETTER
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-newsletter" class="page">
+
+    <div class="page-banner">
+      <div class="max-w-6xl mx-auto max-w-xl">
+        <div class="eyebrow">Newsletter Archive</div>
+        <h1 class="font-serif text-5xl font-bold">Stories and updates from <em class="text-moss not-italic">the field.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-2xl">Explore PERMA newsletters in full. Each viewer below uses button-based page navigation and fits within the visible screen for easier reading.</p>
+      </div>
+    </div>
+
+    <div class="bg-white py-20 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto fade-up">
+        <div class="grid md:grid-cols-1 gap-8">
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Issue 2026</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">PERMA Newsletter 2026</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/src/assets/Newsletter/PERMA Newsletter 2026.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/src/assets/Newsletter/PERMA Newsletter 2026.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="newsletter-2026-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('newsletter-2026', -1)">Previous Page</button>
+                <button id="newsletter-2026-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('newsletter-2026', 1)">Next Page</button>
+                <span id="newsletter-2026-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="newsletter-2026" data-pdf-src="/src/assets/Newsletter/PERMA Newsletter 2026.pdf" class="w-full p-4 bg-white">
+              <div id="newsletter-2026-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="newsletter-2026-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="newsletter-2026-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">Issue 2025</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">PERMA Newsletter 2025</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/src/assets/Newsletter/PERMA newsletter 2025.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/src/assets/Newsletter/PERMA newsletter 2025.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="newsletter-2025-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('newsletter-2025', -1)">Previous Page</button>
+                <button id="newsletter-2025-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('newsletter-2025', 1)">Next Page</button>
+                <span id="newsletter-2025-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="newsletter-2025" data-pdf-src="/src/assets/Newsletter/PERMA newsletter 2025.pdf" class="w-full p-4 bg-white">
+              <div id="newsletter-2025-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="newsletter-2025-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="newsletter-2025-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support — PERMA will be there."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-ink text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
+              onclick="showPage('home');return false">PER<span class="text-gold">MA</span></a>
+            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
+              health, and capacity-building.</p>
+            <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
+              don't.</p>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs">© 2025 PERMA. All rights reserved.</p>
+          <p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /page-newsletter -->
 
 
   <!-- ═══════════════════════════════════════════════════════
