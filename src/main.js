@@ -356,6 +356,8 @@ async function initNewsletterViewer(viewerId) {
 function initNewsletterViewers() {
   initNewsletterViewer('newsletter-2026');
   initNewsletterViewer('newsletter-2025');
+  initNewsletterViewer('newsletter-2023');
+  initNewsletterViewer('newsletter-2022');
 }
 
 function changePdfPage(viewerId, delta) {
