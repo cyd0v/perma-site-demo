@@ -1,3 +1,46 @@
+/* ── Partners Section ───────────────────── */
+.partner-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 12px 0 rgba(44, 62, 80, 0.06);
+  border: 1px solid #ece7df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 260px;
+  transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .45s cubic-bezier(.22, .61, .36, 1) .12s;
+  position: relative;
+  overflow: hidden;
+}
+.partner-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.13);
+  transform: translateY(-4px) scale(1.04);
+}
+.partner-logo {
+  max-width: 145px;
+  max-height: 96px;
+  object-fit: contain;
+  margin-bottom: 1.35rem;
+  filter: grayscale(0.03) contrast(1.08);
+}
+.partner-info {
+  text-align: center;
+}
+.partner-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2E6B47;
+  margin-bottom: .3rem;
+  font-family: 'DM Serif Display', serif;
+}
+.partner-desc {
+  font-size: .97rem;
+  color: #6B6B6B;
+  font-weight: 500;
+  line-height: 1.5;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +71,15 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── Scroll-triggered fade-up ─────────────── */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
 .fade-up.in { opacity: 1; transform: translateY(0); }
+
+/* Ensure card hover transform wins after fade-up is activated. */
+.partner-card.fade-up {
+  transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .45s cubic-bezier(.22, .61, .36, 1) .12s, opacity .65s ease;
+}
+.partner-card.fade-up.in:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.13);
+}
 
 /* ── Top bar social links ─────────────────── */
 .topbar-social {
