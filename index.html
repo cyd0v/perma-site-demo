@@ -78,10 +78,10 @@
     <div class="home-hero relative min-h-screen overflow-hidden">
       <div class="home-hero-slides absolute inset-0">
         <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_1.jpeg')"></div>
-        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_2.jpeg')"></div>
+        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_2.jpeg');filter:brightness(1.15)"></div>
         <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_4.jpeg')"></div>
-        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_5.jpeg')"></div>
-        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_6.jpeg')"></div>
+        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_5.jpeg');background-size:cover;background-position:center"></div>
+        <div class="home-hero-slide" style="background-image:url('/src/assets/Home Images/Home_7.jpeg')"></div>
       </div>
       <div class="absolute inset-0 bg-ink/55"></div>
       <div class="absolute inset-0"
@@ -104,7 +104,7 @@
 
     <!-- PROMISE BAND -->
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
     </div>
 
@@ -199,12 +199,24 @@
     <div class="bg-moss text-white py-20 px-6 text-center">
       <h2 class="font-serif text-4xl font-bold text-white max-w-lg mx-auto mb-4">Be part of the next <em
           class="text-gold-pale not-italic">50 years.</em></h2>
-      <p class="text-white/75 max-w-md mx-auto mb-8">Your support helps us serve Malaysia's underprivileged, elderly,
+      <p class="text-white/75 max-w-md mx-auto mb-12">Your support helps us serve Malaysia's underprivileged, elderly,
         and differently-abled — regardless of race or religion.</p>
-      <div class="flex gap-4 justify-center flex-wrap">
-        <a href="#" class="btn btn-white" onclick="showPage('donate');return false">Donate Now →</a>
-        <a href="#" class="btn btn-outline-white" onclick="showPage('getinvolved');return false">Volunteer</a>
-        <a href="#" class="btn btn-outline-white" onclick="showPage('work');return false">See Our Work</a>
+      <div class="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <a href="#" onclick="showPage('donate');return false" class="group flex flex-col items-center p-8 bg-white/10 rounded-3xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-moss-light flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">💚</div>
+          <h3 class="font-serif text-lg font-semibold mb-2">Donate Now</h3>
+          <p class="text-sm text-white/70">Support our programmes</p>
+        </a>
+        <a href="#" onclick="showPage('getinvolved');return false" class="group flex flex-col items-center p-8 bg-white/10 rounded-3xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-gold-pale flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">🙌</div>
+          <h3 class="font-serif text-lg font-semibold mb-2">Volunteer</h3>
+          <p class="text-sm text-white/70">Give your time</p>
+        </a>
+        <a href="#" onclick="showPage('getinvolved');return false" class="group flex flex-col items-center p-8 bg-white/10 rounded-3xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-terra flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
+          <h3 class="font-serif text-lg font-semibold mb-2">Partner With Us</h3>
+          <p class="text-sm text-white/70">Extend your impact</p>
+        </a>
       </div>
     </div>
 
@@ -321,14 +333,13 @@
           <article class="pvm-card" style="background-image:url('/src/assets/hero_1.jpg')">
             <div class="pvm-card-overlay">
               <h3 class="font-serif text-2xl font-bold mb-2">Vision</h3>
-              <p class="text-sm leading-relaxed">Nurturing minds, building character through education and sports.</p>
+              <p class="text-sm leading-relaxed">Nurturing minds through skills development, education and sports.</p>
             </div>
           </article>
           <article class="pvm-card" style="background-image:url('/src/assets/education.jpg')">
             <div class="pvm-card-overlay">
               <h3 class="font-serif text-2xl font-bold mb-2">Mission</h3>
-              <p class="text-sm leading-relaxed">To support people in need through welfare, health, and
-                capacity-building programmes delivered with care.</p>
+              <p class="text-sm leading-relaxed">To empower young minds through education and capacity-building programmes.</p>
             </div>
           </article>
         </div>
@@ -358,22 +369,22 @@
           <article class="work-value-card" style="background-image:url('/src/assets/About/Dignity.jpeg')">
             <div class="work-value-overlay">
               <span class="work-value-index">03</span>
-              <h3 class="font-serif text-2xl font-bold text-white">Dignity</h3>
-              <p class="text-white/90 text-sm leading-relaxed mt-2">We help without judgement, always honouring the individual.</p>
+              <h3 class="font-serif text-2xl font-bold text-white">Fund Raising</h3>
+              <p class="text-white/90 text-sm leading-relaxed mt-2">Every contribution brings hope, dignity and a brighter future.</p>
             </div>
           </article>
           <article class="work-value-card" style="background-image:url('/src/assets/Health Screening/health3.jpg')">
             <div class="work-value-overlay">
               <span class="work-value-index">04</span>
-              <h3 class="font-serif text-2xl font-bold text-white">Commitment</h3>
-              <p class="text-white/90 text-sm leading-relaxed mt-2">We stay the course - support doesn't end when the immediate crisis does.</p>
+              <h3 class="font-serif text-2xl font-bold text-white">Health &amp; Wellbeing</h3>
+              <p class="text-white/90 text-sm leading-relaxed mt-2">Ensuring better health outcomes through accessible screening and preventive care programmes.</p>
             </div>
           </article>
           <article class="work-value-card md:col-span-2" style="background-image:url('/src/assets/Sports/WhatsApp Image 2026-04-17 at 10.55.25 AM.jpeg')">
             <div class="work-value-overlay">
               <span class="work-value-index">05</span>
-              <h3 class="font-serif text-2xl font-bold text-white">Integrity</h3>
-              <p class="text-white/90 text-sm leading-relaxed mt-2">We are accountable, transparent, and responsible with every resource entrusted to us.</p>
+              <h3 class="font-serif text-2xl font-bold text-white">Youth Empowerment</h3>
+              <p class="text-white/90 text-sm leading-relaxed mt-2">Empowering young minds through access to sports equipment and opportunities for physical development.</p>
             </div>
           </article>
         </div>
@@ -382,7 +393,7 @@
 
     <!-- PROMISE + FOOTER -->
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
     </div>
     <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
@@ -450,12 +461,12 @@
           </h3>
           <p class="text-mist leading-relaxed mb-6">Providing educational opportunities and mentorship to children and youth from underserved communities.</p>
           <ul class="list-disc list-inside text-ink space-y-1.5 ml-4 mb-6">
-            <li>Students Supported</li>
-            <li>Scholarships &amp; School Supplies</li>
+            <li>Future Leaders Nurtured</li>
+            <li>Providing education resources and support</li>
             <li>Mentorship Programmes</li>
             <li>Sports &amp; Leadership Development</li>
           </ul>
-          <p class="text-ink mb-8"><strong>Impact:</strong> Empowering young people to learn, grow and achieve their full potential.</p>
+          <p class="text-ink mb-8"><strong>Impact:</strong> Empowering young people to learn, grow and achieve their full potential. Creating brighter futures.</p>
           <!-- Karthik: full-width cinematic card -->
           <div class="relative rounded-2xl overflow-hidden min-h-[360px] md:min-h-[420px] group">
             <img src="/src/assets/Stories/Karthik.jpeg" alt="Karthik a/l Sivakumar" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
@@ -506,7 +517,7 @@
             <li>Vocational Training</li>
             <li>Life Skills Programmes</li>
           </ul>
-          <p class="text-ink mb-8"><strong>Impact:</strong> Building resilient families and creating pathways to self-reliance.</p>
+          <p class="text-ink mb-8"><strong>Impact:</strong> Building resilient families, creating pathways to self-reliance and independence.</p>
           <!-- Norfaizah: image-dominant with overlapping text panel -->
           <div class="grid md:grid-cols-5 gap-0 rounded-2xl overflow-hidden border border-border bg-cream">
             <div class="md:col-span-2 relative min-h-[320px]">
@@ -514,8 +525,8 @@
             </div>
             <div class="md:col-span-3 p-8 md:p-10 flex flex-col justify-center">
               <div class="inline-flex items-center gap-2 bg-terra/10 text-terra text-xs font-extrabold uppercase tracking-widest rounded-full px-4 py-1.5 w-fit mb-4">VTOC Graduate</div>
-              <h3 class="font-serif text-2xl md:text-3xl font-bold text-ink leading-snug mb-4">From Passion to Profession</h3>
-              <p class="text-mist leading-relaxed">Through VTOC's Culinary Programme, Norfaizah transformed her passion for cooking into a career. After graduating, she was immediately employed by Genting as a Service Crew in the F&amp;B sector. Her success is a testament to how vocational education empowers individuals to achieve financial independence and a brighter future.</p>
+              <h3 class="font-serif text-2xl md:text-3xl font-bold text-ink leading-snug mb-4">Journey to Independence</h3>
+              <p class="text-mist leading-relaxed">Through VTOC's Culinary Programme, Norfaizah transformed her passion for cooking into a career. After graduating, she was immediately employed by Genting Malaysia Berhad as a Service Crew in the F&amp;B sector. Her success is a testament to how vocational education empowers individuals to achieve financial independence and a brighter future.</p>
               <div class="flex items-center gap-3 mt-6 pt-5 border-t border-border">
                 <div class="w-2 h-2 rounded-full bg-terra"></div>
                 <p class="text-ink font-bold text-sm">Norfaizah a/p Singli</p>
@@ -544,7 +555,7 @@
 
     <!-- PROMISE -->
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise &middot; Since 1976</cite>
     </div>
     <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
@@ -702,7 +713,7 @@
     </div>
 
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
     </div>
     <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
@@ -1099,7 +1110,7 @@
     </div>
 
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
     </div>
     <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
@@ -1294,7 +1305,7 @@
     </div>
 
     <div class="bg-moss text-white py-14 px-6 text-center">
-      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When community needs support, you can count on PERMA."</blockquote>
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
       <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
     </div>
     <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
