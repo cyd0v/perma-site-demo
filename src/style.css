@@ -408,10 +408,10 @@ img { max-width: 100%; height: auto; display: block; }
 .home-hero-slide:nth-child(4) { animation-delay: 18s; }
 .home-hero-slide:nth-child(5) { animation-delay: 24s; }
 @keyframes homeHeroCycle {
-  0% { opacity: 0; transform: scale(1.05); }
-  4% { opacity: 1; }
-  18% { opacity: 1; transform: scale(1.02); }
-  22% { opacity: 0; }
+  0% { opacity: 0; transform: scale(1.15); }
+  4% { opacity: 1; transform: scale(1.12); }
+  18% { opacity: 1; transform: scale(1.0); }
+  22% { opacity: 0; transform: scale(1.0); }
   100% { opacity: 0; }
 }
 .home-impact-card {
