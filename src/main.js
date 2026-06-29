@@ -358,6 +358,9 @@ function initNewsletterViewers() {
   initNewsletterViewer('newsletter-2025');
   initNewsletterViewer('newsletter-2023');
   initNewsletterViewer('newsletter-2022');
+  initNewsletterViewer('newsletter-2021');
+  initNewsletterViewer('newsletter-2020');
+  initNewsletterViewer('newsletter-2019');
 }
 
 function changePdfPage(viewerId, delta) {
