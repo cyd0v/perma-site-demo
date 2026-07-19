@@ -147,6 +147,8 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-white:hover  { background: #EBF4EE; }
 .btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
 .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+.btn-give { background: transparent; color: #1A1916; border-color: #fff; }
+.btn-give:hover { background: #2E6B47; border-color: #2E6B47; color: #fff; transform: translateY(-2px); }
 .btn-terra  { background: #C25A3A; color: #fff; border-color: transparent; }
 .btn-terra:hover  { background: #a84d30; transform: translateY(-2px); }
 
