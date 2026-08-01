@@ -4,6 +4,7 @@
 
 let pdfjsLibPromise = null;
 let pdfWorkerInstance = null;
+const PDFJS_ASSET_BASE = '/pdfjs/';
 
 async function loadPdfJs() {
   if (!pdfjsLibPromise) {
@@ -343,7 +344,13 @@ async function initNewsletterViewer(viewerId) {
 
   try {
     const pdfjsLib = await loadPdfJs();
-    const loadingTask = pdfjsLib.getDocument(src);
+    const loadingTask = pdfjsLib.getDocument({
+      url: src,
+      cMapUrl: `${PDFJS_ASSET_BASE}cmaps/`,
+      cMapPacked: true,
+      standardFontDataUrl: `${PDFJS_ASSET_BASE}standard_fonts/`,
+      wasmUrl: `${PDFJS_ASSET_BASE}wasm/`,
+    });
     const pdfDoc = await loadingTask.promise;
 
     newsletterViewers[viewerId] = {
