@@ -361,6 +361,13 @@ function initNewsletterViewers() {
   initNewsletterViewer('newsletter-2021');
   initNewsletterViewer('newsletter-2020');
   initNewsletterViewer('newsletter-2019');
+  initNewsletterViewer('audited-2025');
+  initNewsletterViewer('audited-2024');
+  initNewsletterViewer('audited-2023');
+  initNewsletterViewer('audited-2022');
+  initNewsletterViewer('audited-2021');
+  initNewsletterViewer('audited-2020');
+  initNewsletterViewer('audited-2019');
 }
 
 function changePdfPage(viewerId, delta) {

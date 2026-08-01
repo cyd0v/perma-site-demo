@@ -47,6 +47,7 @@
       <li><a href="#" class="nav-link" onclick="showPage('about');return false">About</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('work');return false">Our Work</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('newsletter');return false">Newsletter</a></li>
+      <li><a href="#" class="nav-link" onclick="showPage('auditedaccounts');return false">Audited Accounts</a></li>
       <li><a href="#" class="nav-link" onclick="showPage('getinvolved');return false">Get Involved</a></li>
       <li><a href="#" class="nav-link nav-donate" onclick="showPage('donate');return false">Donate</a></li>
     </ul>
@@ -65,6 +66,7 @@
     <a href="#" class="mob-link" onclick="showPage('about');toggleMenu();return false">About</a>
     <a href="#" class="mob-link" onclick="showPage('work');toggleMenu();return false">Our Work</a>
     <a href="#" class="mob-link" onclick="showPage('newsletter');toggleMenu();return false">Newsletter</a>
+    <a href="#" class="mob-link" onclick="showPage('auditedaccounts');toggleMenu();return false">Audited Accounts</a>
     <a href="#" class="mob-link" onclick="showPage('getinvolved');toggleMenu();return false">Get Involved</a>
     <a href="#" class="mob-link mob-donate" onclick="showPage('donate');toggleMenu();return false">Donate Now →</a>
   </div>
@@ -910,6 +912,228 @@
       </div>
     </footer>
   </div><!-- /page-newsletter -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE: AUDITED ACCOUNTS
+       ═══════════════════════════════════════════════════════ -->
+  <div id="page-auditedaccounts" class="page">
+
+    <div class="page-banner">
+      <div class="max-w-6xl mx-auto">
+        <div class="eyebrow">Audited Accounts</div>
+        <h1 class="font-serif text-5xl font-bold">Financial transparency, <em class="text-moss not-italic">every year.</em></h1>
+        <p class="text-slate text-lg leading-relaxed mt-3 max-w-2xl">Review PERMA's independently audited financial statements, published annually since 2019.</p>
+      </div>
+    </div>
+
+    <div class="bg-white py-20 px-6 md:px-12 border-b border-border">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-1 gap-8">
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2025</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2025</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2025.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2025.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2025-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2025', -1)">Previous Page</button>
+                <button id="audited-2025-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2025', 1)">Next Page</button>
+                <span id="audited-2025-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2025" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2025.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2025-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2025-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2025-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2024</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2024</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2024.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2024.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2024-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2024', -1)">Previous Page</button>
+                <button id="audited-2024-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2024', 1)">Next Page</button>
+                <span id="audited-2024-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2024" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2024.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2024-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2024-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2024-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2023</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2023</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2023.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2023.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2023-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2023', -1)">Previous Page</button>
+                <button id="audited-2023-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2023', 1)">Next Page</button>
+                <span id="audited-2023-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2023" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2023.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2023-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2023-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2023-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2022</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2022</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2022.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2022.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2022-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2022', -1)">Previous Page</button>
+                <button id="audited-2022-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2022', 1)">Next Page</button>
+                <span id="audited-2022-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2022" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2022.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2022-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2022-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2022-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2021</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2021</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2021.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2021.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2021-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2021', -1)">Previous Page</button>
+                <button id="audited-2021-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2021', 1)">Next Page</button>
+                <span id="audited-2021-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2021" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2021.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2021-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2021-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2021-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2020</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2020</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2020.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2020.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2020-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2020', -1)">Previous Page</button>
+                <button id="audited-2020-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2020', 1)">Next Page</button>
+                <span id="audited-2020-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2020" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2020.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2020-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2020-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2020-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-border bg-cream/40 overflow-hidden">
+            <div class="p-6 border-b border-border bg-white/70">
+              <p class="text-xs uppercase tracking-widest text-terra font-extrabold mb-2">FY 2019</p>
+              <h3 class="font-serif text-2xl font-bold text-ink">Audited Accounts PERMA June 2019</h3>
+              <p class="text-mist text-sm mt-2">Read online or open in a new tab for full-screen viewing.</p>
+              <div class="flex gap-3 mt-4 flex-wrap">
+                <a class="btn btn-outline" href="/Audited Accounts/Audited Accounts PERMA June 2019.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-green" href="/Audited Accounts/Audited Accounts PERMA June 2019.pdf" download>Download</a>
+              </div>
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <button id="audited-2019-prev" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2019', -1)">Previous Page</button>
+                <button id="audited-2019-next" type="button" class="btn btn-outline text-sm py-2 px-4" onclick="changePdfPage('audited-2019', 1)">Next Page</button>
+                <span id="audited-2019-page-label" class="text-sm text-mist font-semibold">Page 1 / -</span>
+              </div>
+            </div>
+            <div id="audited-2019" data-pdf-src="/Audited Accounts/Audited Accounts PERMA June 2019.pdf" class="w-full p-4 bg-white">
+              <div id="audited-2019-viewport" class="w-full border border-border/70 rounded-lg overflow-hidden bg-white min-h-[420px] flex items-center justify-center">
+                <canvas id="audited-2019-canvas" class="w-full h-auto"></canvas>
+              </div>
+              <p id="audited-2019-status" class="text-xs text-mist mt-2">Loading page...</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-moss text-white py-14 px-6 text-center">
+      <blockquote class="font-serif text-2xl md:text-3xl italic max-w-2xl mx-auto mb-3">"When communities need support, you can count on PERMA."</blockquote>
+      <cite class="text-xs tracking-widest uppercase text-white/50 not-italic">Our Brand Promise · Since 1976</cite>
+    </div>
+    <footer class="bg-maroon text-white/60 py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-10">
+          <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
+              onclick="showPage('home');return false">PERMA</a>
+            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
+              health, and capacity-building.</p>
+            <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
+              don't.</p>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Our Work</h5>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Welfare</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Health</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('work');return false">Capacity Building</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-serif text-white text-sm mb-4 font-semibold">Get Involved</h5>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="footer-link" onclick="showPage('donate');return false">Donate</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Volunteer</a></li>
+              <li><a href="#" class="footer-link" onclick="showPage('getinvolved');return false">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs">© 2025 PERMA. All rights reserved.</p>
+          <p class="text-xs text-white/30">Registered Welfare Organisation · Malaysia</p>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /page-auditedaccounts -->
 
 
   <!-- ═══════════════════════════════════════════════════════
