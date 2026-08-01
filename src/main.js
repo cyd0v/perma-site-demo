@@ -49,6 +49,7 @@ function showPage(name) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
   setTimeout(initFadeUps, 100);
+  initViewersForPage(name);
 }
 
 // ── Mobile menu ────────────────────────────
@@ -256,6 +257,12 @@ function prevSlide(btnEl) {
 const newsletterViewers = {};
 const NEWSLETTER_SCALE_FACTOR = 0.82;
 
+const PAGE_PDF_VIEWERS = {
+  newsletter: ['newsletter-2026', 'newsletter-2025', 'newsletter-2023', 'newsletter-2022', 'newsletter-2021', 'newsletter-2020', 'newsletter-2019'],
+  auditedaccounts: ['audited-2025', 'audited-2024', 'audited-2023', 'audited-2022', 'audited-2021', 'audited-2020', 'audited-2019'],
+};
+const pdfViewerInitStarted = new Set();
+
 function updateNewsletterControls(viewerId) {
   const viewer = newsletterViewers[viewerId];
   if (!viewer) return;
@@ -321,6 +328,9 @@ async function renderNewsletterPage(viewerId) {
 }
 
 async function initNewsletterViewer(viewerId) {
+  if (pdfViewerInitStarted.has(viewerId)) return;
+  pdfViewerInitStarted.add(viewerId);
+
   const root = document.getElementById(viewerId);
   const canvas = document.getElementById(`${viewerId}-canvas`);
   if (!root || !canvas) return;
@@ -353,21 +363,10 @@ async function initNewsletterViewer(viewerId) {
   }
 }
 
-function initNewsletterViewers() {
-  initNewsletterViewer('newsletter-2026');
-  initNewsletterViewer('newsletter-2025');
-  initNewsletterViewer('newsletter-2023');
-  initNewsletterViewer('newsletter-2022');
-  initNewsletterViewer('newsletter-2021');
-  initNewsletterViewer('newsletter-2020');
-  initNewsletterViewer('newsletter-2019');
-  initNewsletterViewer('audited-2025');
-  initNewsletterViewer('audited-2024');
-  initNewsletterViewer('audited-2023');
-  initNewsletterViewer('audited-2022');
-  initNewsletterViewer('audited-2021');
-  initNewsletterViewer('audited-2020');
-  initNewsletterViewer('audited-2019');
+function initViewersForPage(name) {
+  const viewerIds = PAGE_PDF_VIEWERS[name];
+  if (!viewerIds) return;
+  viewerIds.forEach((viewerId) => initNewsletterViewer(viewerId));
 }
 
 function changePdfPage(viewerId, delta) {
@@ -401,5 +400,5 @@ window.addEventListener('resize', () => {
 // ── Init on load ───────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initFadeUps();
-  initNewsletterViewers();
+  initViewersForPage(currentPage());
 });
