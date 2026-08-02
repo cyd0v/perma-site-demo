@@ -249,6 +249,16 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .form-input:focus { border-color: #2E6B47; }
 
+@media (max-width: 767px) {
+  input[type="date"].form-input {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: .8rem;
+    padding-right: .5rem;
+  }
+}
+
 /* ── Donate: frequency toggle ─────────────── */
 .freq-btn {
   flex: 1; text-align: center; padding: .5rem; border-radius: 3rem;

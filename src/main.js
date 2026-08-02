@@ -54,15 +54,25 @@ function showPage(name) {
 }
 
 // ── Mobile menu ────────────────────────────
+function positionMobileMenu() {
+  const navbar = document.getElementById('navbar');
+  const menu = document.getElementById('mobile-menu');
+  if (!navbar || !menu) return;
+  menu.style.top = `${navbar.getBoundingClientRect().bottom}px`;
+}
+
 function toggleMenu() {
   const hamburger = document.getElementById('hamburger');
   const menu = document.getElementById('mobile-menu');
   if (!hamburger || !menu) return;
 
+  positionMobileMenu();
   hamburger.classList.toggle('open');
   menu.classList.toggle('hidden');
   menu.classList.toggle('flex');
 }
+
+window.addEventListener('resize', positionMobileMenu);
 
 window.showPage = showPage;
 window.toggleMenu = toggleMenu;

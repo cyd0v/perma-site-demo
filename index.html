@@ -61,7 +61,7 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu"
-    class="hidden fixed top-[120px] left-0 right-0 z-30 bg-white border-b border-border px-6 pt-4 pb-6 flex-col gap-1 shadow-lg">
+    class="hidden fixed left-0 right-0 z-30 bg-white border-b border-border px-6 pt-4 pb-6 flex-col gap-1 shadow-lg" style="top:120px">
     <a href="#" class="mob-link" onclick="showPage('home');toggleMenu();return false">Home</a>
     <a href="#" class="mob-link" onclick="showPage('about');toggleMenu();return false">About</a>
     <a href="#" class="mob-link" onclick="showPage('work');toggleMenu();return false">Our Work</a>
@@ -518,14 +518,14 @@
             <p class="text-white font-bold text-lg leading-relaxed">Strengthened community resilience by ensuring access to basic necessities in times of hardship.</p>
           </div>
           <!-- Welfare collage + description -->
-          <div class="grid md:grid-cols-5 gap-0 rounded-2xl overflow-hidden border border-gold/20 bg-gold-pale">
-            <div class="md:col-span-2 relative min-h-[500px]">
-              <div class="grid grid-cols-2 grid-rows-3 absolute inset-0">
-                <img src="/src/assets/Welfare/Welfare 1.jpeg" alt="Welfare distribution" class="w-full h-full object-cover row-span-2" />
-                <img src="/src/assets/Welfare/Welfare 2.jpeg" alt="Welfare distribution" class="w-full h-full object-cover" />
-                <img src="/src/assets/Welfare/Welfare 3.jpeg" alt="Welfare distribution" class="w-full h-full object-cover" />
-                <img src="/src/assets/Welfare/Welfare 4.jpeg" alt="Welfare distribution" class="w-full h-full object-cover" />
-                <img src="/src/assets/Welfare/Welfare 5.jpeg" alt="Welfare distribution" class="w-full h-full object-cover" />
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-0 rounded-2xl overflow-hidden border border-gold/20 bg-gold-pale">
+            <div class="md:col-span-2 relative md:min-h-[500px]">
+              <div class="grid grid-cols-2 gap-1 md:gap-0 md:grid-rows-3 md:absolute md:inset-0">
+                <img src="/src/assets/Welfare/Welfare 1.jpeg" alt="Welfare distribution" class="w-full aspect-square md:aspect-auto md:h-full object-cover md:row-span-2" />
+                <img src="/src/assets/Welfare/Welfare 2.jpeg" alt="Welfare distribution" class="w-full aspect-square md:aspect-auto md:h-full object-cover" />
+                <img src="/src/assets/Welfare/Welfare 3.jpeg" alt="Welfare distribution" class="w-full aspect-square md:aspect-auto md:h-full object-cover" />
+                <img src="/src/assets/Welfare/Welfare 4.jpeg" alt="Welfare distribution" class="w-full aspect-square md:aspect-auto md:h-full object-cover" />
+                <img src="/src/assets/Welfare/Welfare 5.jpeg" alt="Welfare distribution" class="w-full aspect-square md:aspect-auto md:h-full object-cover" />
               </div>
             </div>
             <div class="md:col-span-3 p-8 md:p-10 flex flex-col justify-center">
