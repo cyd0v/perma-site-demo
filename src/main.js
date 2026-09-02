@@ -3,19 +3,20 @@
 // ═══════════════════════════════════════════
 
 let pdfjsLibPromise = null;
-let pdfWorkerInstance = null;
 const PDFJS_ASSET_BASE = '/pdfjs/';
 
 async function loadPdfJs() {
   if (!pdfjsLibPromise) {
     pdfjsLibPromise = import('pdfjs-dist/build/pdf.mjs').then((mod) => {
-      if (!pdfWorkerInstance) {
-        pdfWorkerInstance = new Worker(
-          new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url),
-          { type: 'module' }
-        );
-      }
-      mod.GlobalWorkerOptions.workerPort = pdfWorkerInstance;
+      // Point at the worker file (served as-is from /public — NOT run through
+      // Vite's worker bundling, which double-processes pdfjs-dist's already
+      // minified worker and breaks it) via workerSrc, and let pdf.js spin up
+      // its own dedicated Worker per document. We previously pooled a single
+      // shared Worker across every open viewer via workerPort; with up to 7
+      // PDFs open on one page, that shared connection's message routing
+      // stalled and every render() call hung forever with no error. A worker
+      // per document is pdf.js's standard, supported pattern.
+      mod.GlobalWorkerOptions.workerSrc = `${PDFJS_ASSET_BASE}pdf.worker.min.mjs`;
       return mod;
     });
   }
