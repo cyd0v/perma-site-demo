@@ -92,7 +92,7 @@
 
       <div class="relative z-10 max-w-6xl mx-auto px-12 py-24 max-md:px-6 max-md:pt-20 max-md:pb-12">
         <div class="eyebrow" style="color:#EED9AA">Trusted for 50 years · Est. 1976</div>
-        <h1 class="font-serif text-4xl md:text-5xl font-bold leading-snug text-white max-w-xl">Every day,<br>families across Malaysia<br><em class="not-italic" style="color:#F5C542; text-shadow: 0 2px 16px rgba(245,197,66,.35)">fall through the cracks.</em></h1>
+        <h1 class="font-serif text-4xl md:text-5xl font-bold leading-snug text-white max-w-xl">Every day, when<br>families across Malaysia<br><em class="not-italic" style="color:#F5C542; text-shadow: 0 2px 16px rgba(245,197,66,.35)">fall through the cracks.</em></h1>
         <h1 class="font-serif text-4xl md:text-5xl font-bold italic leading-snug text-white">We step in.</h1>
         <p class="text-white/90 leading-relaxed max-w-2xl mt-5 text-lg">Making a difference — <strong>one life at a time.</strong> Since 1976.</p>
         <p class="text-white/70 leading-relaxed max-w-2xl mt-2 text-base">Welfare, health, education, and capacity-building — delivered with dignity.</p>
@@ -123,7 +123,7 @@
             meet people where they are and walk with them toward a stronger future.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-up">
-          <div class="prog-card" style="background:#C2DCC7">
+          <div class="prog-card" style="background:#C2DCC7;cursor:pointer" onclick="showPage('work');return false">
             <div class="prog-card-bar" style="background:#2E6B47"></div>
             <div class="p-7">
               <div class="w-12 h-12 rounded-xl bg-moss/15 flex items-center justify-center text-2xl mb-5">🤲</div>
@@ -132,7 +132,7 @@
               <a href="#" class="prog-link" onclick="showPage('work');return false">Learn more →</a>
             </div>
           </div>
-          <div class="prog-card" style="background:#F5C0AD">
+          <div class="prog-card" style="background:#F5C0AD;cursor:pointer" onclick="showPage('work');return false">
             <div class="prog-card-bar" style="background:#C25A3A"></div>
             <div class="p-7">
               <div class="w-12 h-12 rounded-xl bg-terra/15 flex items-center justify-center text-2xl mb-5">❤️</div>
@@ -141,7 +141,7 @@
               <a href="#" class="prog-link" style="color:#C25A3A" onclick="showPage('work');return false">Learn more →</a>
             </div>
           </div>
-          <div class="prog-card" style="background:#EDCB84">
+          <div class="prog-card" style="background:#EDCB84;cursor:pointer" onclick="showPage('work');return false">
             <div class="prog-card-bar" style="background:#B8892A"></div>
             <div class="p-7">
               <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-2xl mb-5">📚</div>
@@ -150,7 +150,7 @@
               <a href="#" class="prog-link" style="color:#B8892A" onclick="showPage('work');return false">Learn more →</a>
             </div>
           </div>
-          <div class="prog-card" style="background:#C3C7C6">
+          <div class="prog-card" style="background:#C3C7C6;cursor:pointer" onclick="showPage('work');return false">
             <div class="prog-card-bar" style="background:#4A4744"></div>
             <div class="p-7">
               <div class="w-12 h-12 rounded-xl bg-slate/15 flex items-center justify-center text-2xl mb-5">🤝</div>
@@ -171,22 +171,25 @@
             lasting difference.</em></h2>
         <p class="text-white/70 max-w-xl mb-12">Since 1976, PERMA has supported individuals and families through practical
           assistance and community programmes — responding to need and helping improve lives.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden"
-          style="gap:1.5px;background:rgba(255,255,255,.15)">
+        <div class="grid grid-cols-2 gap-4">
           <div class="stat-dark-cell">
-            <div class="font-serif text-4xl font-bold text-gold-pale mb-1">50 Years</div>
+            <div class="stat-icon">📅</div>
+            <div class="font-serif text-4xl font-bold text-gold-pale">50 Years</div>
             <div class="text-white/60 text-sm">Serving communities since 1976</div>
           </div>
           <div class="stat-dark-cell">
-            <div class="font-serif text-4xl font-bold text-gold-pale mb-1">13,000+</div>
+            <div class="stat-icon">👨‍👩‍👧</div>
+            <div class="font-serif text-4xl font-bold text-gold-pale">13,000+</div>
             <div class="text-white/60 text-sm">Individuals &amp; families supported</div>
           </div>
           <div class="stat-dark-cell">
-            <div class="font-serif text-4xl font-bold text-gold-pale mb-1">750+</div>
+            <div class="stat-icon">🛠️</div>
+            <div class="font-serif text-4xl font-bold text-gold-pale">750+</div>
             <div class="text-white/60 text-sm">Community projects undertaken</div>
           </div>
           <div class="stat-dark-cell">
-            <div class="font-serif text-4xl font-bold text-gold-pale mb-1">RM3.5M~</div>
+            <div class="stat-icon">💰</div>
+            <div class="font-serif text-4xl font-bold text-gold-pale">RM3.5M~</div>
             <div class="text-white/60 text-sm">Financial assistance &amp; programme expenditure</div>
           </div>
         </div>
@@ -229,8 +232,8 @@
           <div class="md:col-span-2">
             <a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building — delivered with dignity and care.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
             <div class="flex gap-2 mt-5">
@@ -448,8 +451,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building — delivered with dignity and care.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
@@ -664,8 +667,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
@@ -887,8 +890,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
@@ -1110,8 +1113,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
@@ -1164,7 +1167,7 @@
             difference.</em></h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 fade-up">
           <!-- Donate — green -->
-          <div class="rounded-xl overflow-hidden border border-moss/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-moss/15">
+          <div class="rounded-xl overflow-hidden border border-moss/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-moss/15 cursor-pointer" onclick="showPage('donate');return false">
             <div class="p-7" style="background:#CDE3D5">
               <div class="w-12 h-12 rounded-full bg-moss/15 flex items-center justify-center text-2xl mb-4">💚</div>
               <h3 class="font-serif text-xl font-semibold text-moss mb-2">Donate</h3>
@@ -1176,7 +1179,7 @@
                 class="text-white/60">→</span></div>
           </div>
           <!-- Volunteer — gold -->
-          <div class="rounded-xl overflow-hidden border border-gold/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-gold/15">
+          <div class="rounded-xl overflow-hidden border border-gold/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-gold/15 cursor-pointer" onclick="document.getElementById('vol-form').scrollIntoView({behavior:'smooth'});return false">
             <div class="p-7" style="background:#F2E2BE">
               <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-2xl mb-4">🙌</div>
               <h3 class="font-serif text-xl font-semibold text-gold mb-2">Volunteer</h3>
@@ -1187,7 +1190,7 @@
                 class="text-white text-sm font-extrabold">Register below</a><span class="text-white/60">→</span></div>
           </div>
           <!-- Partner — terra -->
-          <div class="rounded-xl overflow-hidden border border-terra/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-terra/15">
+          <div class="rounded-xl overflow-hidden border border-terra/20 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-terra/15 cursor-pointer" onclick="document.getElementById('partner').scrollIntoView({behavior:'smooth'});return false">
             <div class="p-7" style="background:#F0D3C8">
               <div class="w-12 h-12 rounded-full bg-terra/15 flex items-center justify-center text-2xl mb-4">🤝</div>
               <h3 class="font-serif text-xl font-semibold text-terra mb-2">Partner</h3>
@@ -1532,8 +1535,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
@@ -1643,19 +1646,19 @@
         <div class="eyebrow">Other Ways to Give</div>
         <h2 class="font-serif text-4xl font-bold">More ways to <em class="text-moss not-italic">support PERMA.</em></h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 fade-up">
-          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8">
+          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md cursor-pointer" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8" onclick="showContactSection();return false">
             <div class="text-3xl mb-3">🏦</div>
             <h3 class="font-serif text-xl font-semibold mb-2">Bank Transfer</h3>
             <p class="text-slate text-sm leading-relaxed mb-4">Prefer to give via direct bank transfer? Contact us and we'll send our banking details with a receipt.</p>
             <a href="#" onclick="showContactSection();return false" class="btn btn-give text-sm py-2 px-4">Get bank details →</a>
           </div>
-          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8">
+          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md cursor-pointer" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8" onclick="showContactSection();return false">
             <div class="text-3xl mb-3">🏢</div>
             <h3 class="font-serif text-xl font-semibold mb-2">Corporate Giving</h3>
             <p class="text-slate text-sm leading-relaxed mb-4">Looking to make a larger organisational contribution or set up a structured CSR partnership?</p>
             <a href="#" onclick="showContactSection();return false" class="btn btn-give text-sm py-2 px-4">Talk to us →</a>
           </div>
-          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8">
+          <div class="rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 hover:shadow-md cursor-pointer" style="background:rgba(195,199,198,0.82);border:1px solid #B5B9B8" onclick="showContactSection();return false">
             <div class="text-3xl mb-3">🎁</div>
             <h3 class="font-serif text-xl font-semibold mb-2">Give in Kind</h3>
             <p class="text-slate text-sm leading-relaxed mb-4">Donations of food, clothing, equipment, or professional services are also welcomed.</p>
@@ -1702,8 +1705,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-10">
           <div class="md:col-span-2"><a href="#" class="font-serif text-2xl font-bold text-white mb-3 block"
               onclick="showPage('home');return false">PERMA</a>
-            <p class="text-sm leading-relaxed max-w-xs">Supporting individuals and families in need through welfare,
-              health, education, and capacity-building.</p>
+            <p class="text-sm leading-relaxed max-w-xs">Serving communities since 1976.<br>
+              Welfare · Health · Education · Capacity Building</p>
             <p class="mt-4 italic text-sm text-white/35 border-l-2 border-gold pl-3">Care that reaches where others
               don't.</p>
           </div>
